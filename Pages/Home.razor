@@ -1,0 +1,444 @@
+@page "/"
+@using SWTIWOOCMTG
+@inject Game Game
+
+@if (screen == Screen.MainMenu)
+{
+    <div class="menu-screen">
+        <img class="board-art" src="images/board-logo.svg" alt="SWTIWOOCMTG" />
+        <button @onclick="StartGame">Start Game</button>
+        <button @onclick="Quit">Quit</button>
+    </div>
+}
+else if (screen == Screen.PlayerCount)
+{
+    <div class="menu-screen">
+        <h2>How many players?</h2>
+        <input type="number" min="2" max="8" @bind="playerCountInput" />
+        <button @onclick="ConfirmPlayerCount">Confirm</button>
+        @if (!string.IsNullOrEmpty(error))
+        {
+            <p style="color:red">@error</p>
+        }
+    </div>
+}
+else if (screen == Screen.PlayerNames)
+{
+    <div class="menu-screen">
+        <h2>Player @(Game.Players.Count + 1) of @targetPlayerCount — enter name:</h2>
+        <input @bind="nameInput" @bind:event="oninput"
+               @onkeyup="@(e => { if (e.Key == "Enter") AddPlayer(); })" />
+        <button @onclick="AddPlayer">Next</button>
+        @if (!string.IsNullOrEmpty(error))
+        {
+            <p style="color:red">@error</p>
+        }
+    </div>
+}
+else if (screen == Screen.HouseRules)
+{
+    <div class="menu-screen">
+        <h2>House Rules</h2>
+
+        <label>
+            <input type="checkbox" @bind="Game.Rules.Jackpot" />
+            Jackpot: LOTTO! space pays out accumulated pot.
+        </label>
+
+        <label>
+            <input type="checkbox" @bind="Game.Rules.PrisonGenPop" />
+            Gen Pop Prison: A prison tier that's a bit harsher than That Other Game.
+        </label>
+
+        <label>
+            <input type="checkbox" @bind="Game.Rules.PropertyColorGroups" />
+            Property Color Groups: Group-based rent bonuses.
+        </label>
+
+        <label>
+            <input type="checkbox" @bind="Game.Rules.Gentrification" />
+            Gentrification: TO-DO: NOT IMPLEMENTED YET!
+        </label>
+
+        <button @onclick="BeginGame">Start Playing</button>
+    </div>
+}
+else if (screen == Screen.Board)
+{
+    <div class="board-wrapper">
+        <img class="board-bg" src="images/board-logo.svg" alt="board" />
+        @for (int i = 0; i < 40; i++)
+        {
+            var idx = i;
+            var (leftPct, topPct) = GetTokenPosition(idx);
+            @foreach (var p in Game.Players.Where(pl => pl.Position == idx))
+            {
+                <img class="token" src="images/token@(p.TokenNumber).svg" title="@p.Name"
+                     style="left:@(leftPct)%; top:@(topPct)%;" />
+            }
+        }
+    </div>
+
+    <div class="hud">
+    @if (die1 != null && die2 != null)
+    {
+        <div class="dice-row">
+            <img class="die" src="images/whitedice_@(die1).svg" alt="die 1" />
+            <img class="die" src="images/reddice_@(die2).svg" alt="die 2" />
+        </div>
+    }
+    @if (!string.IsNullOrEmpty(currentRoll))
+    {
+        <p>@currentRoll</p>
+    }
+
+    @if (!string.IsNullOrEmpty(Game.LastCardText))
+    {
+        <div class="card-flavor"><em>@Game.LastCardText</em></div>
+    }
+
+    @if (phase == TurnPhase.AwaitingRoll)
+    {
+        @if (Game.CurrentPlayer?.Prison != PrisonStatus.Free)
+        {
+            <p>@Game.CurrentPlayer?.Name is in prison.</p>
+            <button @onclick="PayBail">Pay Bail</button>
+            <button @onclick="AttemptAppeal">Roll for Doubles</button>
+            if (Game.CurrentPlayer?.LawyerTokens > 0)
+            {
+                <button @onclick="UseLawyerToken">Use Lawyer Token to move to Minimal Security</button>
+            }
+            if (Game.CurrentPlayer?.GoojfCards.Any() == true){
+                <button @onclick="UseGOJFCard">Use Get Out of Jail Free Card</button>
+            }
+        }
+        else
+        {
+            <p>@Game.CurrentPlayer?.Name's turn — ₿@Game.CurrentPlayer?.Money</p>
+            <button @onclick="RollDice">Roll Dice</button>
+            <button @onclick="OpenPropertyManager">Manage Properties</button>
+        }
+    }
+    else if (phase == TurnPhase.AwaitingPurchase && pendingPurchase != null)
+    {
+        <p>Buy @pendingPurchase.Name for ₿@pendingPurchase.Price?</p>
+        <button @onclick="BuyProperty">Buy</button>
+        <button @onclick="SkipPurchase">Skip</button>
+    }
+    else if (phase == TurnPhase.AwaitingSpecialPurchase && Game.PendingSpecialPurchase != null)
+    {
+        <p>Buy @Game.PendingSpecialPurchase.Name for ₿@Game.PendingSpecialPrice (special tribute price)?</p>
+        <button @onclick="BuySpecialProperty">Buy</button>
+        <button @onclick="SkipSpecialPurchase">Skip</button>
+    }
+    else if (phase == TurnPhase.ManageProperties)
+{
+    <div class="menu-screen">
+        <h2>Manage Properties</h2>
+        <p>Standard Upgrade Resources: @Game.LevelsAvailable | Max Upgrade Resources: @Game.MaxesAvailable</p>
+
+        @foreach (var prop in managingPlayer?.Properties ?? new List<BoardSpace>())
+        {
+            <div class="property-row">
+                <span>
+                    @prop.Name
+                    @(prop.Type == SpaceType.Property ? $" — Lv.{(prop.Level == 5 ? "MAX" : prop.Level.ToString())}" : "")
+                    @(prop.IsMortgaged ? " (Mortgaged)" : "")
+                </span>
+
+                @if (prop.Type == SpaceType.Property)
+                {
+                    <button @onclick="@(() => UpgradeProperty(prop))" disabled="@(prop.Level >= 5)">Upgrade (₿@prop.UpgradeCost)</button>
+                    <button @onclick="@(() => DowngradeProperty(prop))" disabled="@(prop.Level <= 0)">Sell Upgrade (+₿@(prop.UpgradeCost / 2))</button>
+                }
+
+                @if (!prop.IsMortgaged)
+                {
+                    <button @onclick="@(() => MortgageProperty(prop))" disabled="@(prop.Level > 0)">Mortgage (+₿@prop.MortgageValue)</button>
+                }
+                else
+                {
+                    <button @onclick="@(() => UnmortgageProperty(prop))">Unmortgage (₿@prop.UnmortgageCost)</button>
+                }
+            </div>
+        }
+
+        @if (!string.IsNullOrEmpty(error))
+        {
+            <p style="color:red">@error</p>
+        }
+
+        <button @onclick="ClosePropertyManager">Back</button>
+    </div>
+        }
+        else if (phase == TurnPhase.SettlingDebt && Game.CurrentDebt != null)
+{
+    <div class="menu-screen">
+        <h2>Debt!</h2>
+        <p>@Game.CurrentDebt.Debtor.Name owes ₿@Game.CurrentDebt.Amount @(Game.CurrentDebt.Creditor != null ? $"to {Game.CurrentDebt.Creditor.Name}" : "to the Bank") — only has ₿@Game.CurrentDebt.Debtor.Money.</p>
+        <p>Sell upgrades or mortgage properties to raise cash.</p>
+
+        <button @onclick="OpenPropertyManager">Manage Properties</button>
+        <button @onclick="PayDebt" disabled="@(Game.CurrentDebt.Debtor.Money < Game.CurrentDebt.Amount)">Pay Debt</button>
+        <button @onclick="DeclareBankruptcy">Declare Bankruptcy</button>
+
+        @if (!string.IsNullOrEmpty(error))
+        {
+            <p style="color:red">@error</p>
+        }
+    </div>
+}
+
+    <div class="log">
+        @foreach (var line in Game.Log.TakeLast(6))
+        {
+            <p>@line</p>
+        }
+    </div>
+</div>
+}
+
+<button @onclick="ExportLog">Export Log</button>
+
+@code {
+    enum Screen { MainMenu, PlayerCount, PlayerNames, HouseRules, Board, GameOver }
+    enum TurnPhase { AwaitingRoll, AwaitingPurchase, AwaitingSpecialPurchase, ManageProperties, SettlingDebt }
+
+    Screen screen = Screen.MainMenu;
+    TurnPhase phase = TurnPhase.AwaitingRoll;
+    BoardSpace? pendingPurchase;
+
+    int playerCountInput = 2;
+    int targetPlayerCount;
+    string nameInput = "";
+    string error = "";
+
+    void StartGame() => screen = Screen.PlayerCount;
+
+    void ExportLog() => Game.ExportLog("gamelog.txt");
+
+    void ConfirmPlayerCount()
+    {
+        if (Game.TrySetPlayerCount(playerCountInput, out error))
+        {
+            targetPlayerCount = playerCountInput;
+            screen = Screen.PlayerNames;
+        }
+    }
+
+    void AddPlayer()
+    {
+        if (Game.TryAddPlayer(nameInput, out error))
+        {
+            Game.Players[^1].TokenNumber = Game.Players.Count;
+            nameInput = "";
+            if (Game.Players.Count >= targetPlayerCount)
+                screen = Screen.HouseRules;
+        }
+    }
+
+    void BeginGame() => screen = Screen.Board;
+    string currentRoll = "";
+    int? die1;
+    int? die2;
+    bool rollAgainPending;
+    Player? managingPlayer;
+   void RollDice()
+    {
+        var player = Game.CurrentPlayer;
+        if (player == null) return;
+
+        Game.ClearLastCard();
+        var (d1, d2) = Game.RollDice();
+        die1 = d1; die2 = d2;
+        currentRoll = $"{player.Name} rolled [{d1}] [{d2}]{(d1 == d2 ? " DOUBLES!" : "")} ({d1 + d2} spaces)";
+
+        var outcome = Game.RegisterRoll(d1, d2);
+
+        if (outcome == RollOutcome.SpeedingToPrison)
+        {
+            Game.SendToPrison(player, PrisonStatus.GenPop, noPayday: true);
+            Game.Log.Add($"{player.Name} rolled doubles three times in a row — busted for reckless speeding and sent straight to Prison!");
+            rollAgainPending = false;
+            EndTurn();
+            return;
+        }
+
+        rollAgainPending = outcome == RollOutcome.RollAgain;
+
+        Game.MovePlayer(player, d1 + d2);
+        Game.LandOnSpace(player, d1, d2);
+
+        if (Game.PendingDebts.Count > 0) { phase = TurnPhase.SettlingDebt; return; }
+        if (Game.PendingSpecialPurchase != null) { phase = TurnPhase.AwaitingSpecialPurchase; return; }
+
+        var space = Game.Board[player.Position];
+        if (space.IsOwnable && space.Owner == null)
+        {
+            pendingPurchase = space;
+            phase = TurnPhase.AwaitingPurchase;
+            return;
+        }
+
+        EndTurn();
+    }
+
+    void BuyProperty()
+    {
+        if (pendingPurchase != null && Game.CurrentPlayer != null)
+            Game.TryPurchaseProperty(Game.CurrentPlayer, pendingPurchase);
+        EndTurn();
+    }
+
+    void BuySpecialProperty()
+{
+    if (Game.CurrentPlayer != null)
+        Game.ResolveSpecialPurchase(Game.CurrentPlayer, true);
+    EndTurn();
+}
+
+    void SkipSpecialPurchase()
+    {
+        if (Game.CurrentPlayer != null)
+            Game.ResolveSpecialPurchase(Game.CurrentPlayer, false);
+        EndTurn();
+    }
+
+    void SkipPurchase() => EndTurn();
+
+    void EndTurn()
+    {
+        pendingPurchase = null;
+        phase = TurnPhase.AwaitingRoll;
+
+        bool stillActive = Game.CurrentPlayer != null && !Game.CurrentPlayer.IsEliminated;
+
+        if (rollAgainPending && stillActive)
+            rollAgainPending = false;
+        else
+        {
+            rollAgainPending = false;
+            Game.NextTurn();
+        }
+
+        if (Game.IsGameOver)
+            screen = Screen.GameOver;
+    }
+
+    void PayBail()
+    {
+        if (Game.CurrentPlayer != null)
+            Game.TryPayBail(Game.CurrentPlayer, out error);
+    }
+
+    void AttemptAppeal()
+    {
+        var player = Game.CurrentPlayer;
+        if (player == null) return;
+
+        var (d1, d2) = Game.RollDice();
+        currentRoll = $"{player.Name} rolled [{d1}] [{d2}]";
+        bool escaped = Game.TryAppealWithDoubles(player, d1, d2);
+
+        if (escaped)
+        {
+            Game.MovePlayer(player, d1 + d2);
+            Game.LandOnSpace(player, d1, d2);
+        }
+
+        EndTurn();
+    }
+
+    void UseLawyerToken()
+    {
+        if (Game.CurrentPlayer != null)
+            Game.TryLawyerToken(Game.CurrentPlayer, out error);
+    }
+
+    void UseGOJFCard()
+    {
+        if (Game.CurrentPlayer != null)
+            Game.TryGoojfCard(Game.CurrentPlayer, out error); 
+    }
+
+    void OpenPropertyManager()
+    {
+        error = "";
+        managingPlayer = Game.CurrentDebt?.Debtor ?? Game.CurrentPlayer;
+        phase = TurnPhase.ManageProperties;
+    }
+
+    void ClosePropertyManager()
+    {
+        phase = Game.PendingDebts.Count > 0 ? TurnPhase.SettlingDebt : TurnPhase.AwaitingRoll;
+        managingPlayer = null;
+    }
+
+    void UpgradeProperty(BoardSpace space) { if (managingPlayer != null) Game.TryUpgradeProperty(managingPlayer, space, out error); }
+void DowngradeProperty(BoardSpace space) { if (managingPlayer != null) Game.TryDowngradeProperty(managingPlayer, space, out error); }
+void MortgageProperty(BoardSpace space) { if (managingPlayer != null) Game.TryMortgageProperty(managingPlayer, space, out error); }
+void UnmortgageProperty(BoardSpace space) { if (managingPlayer != null) Game.TryUnmortgageProperty(managingPlayer, space, out error); }
+
+    void PayDebt()
+    {
+        if (Game.TryResolveDebt(out error))
+            phase = Game.PendingDebts.Count > 0 ? TurnPhase.SettlingDebt : TurnPhase.AwaitingRoll;
+
+        if (Game.PendingDebts.Count == 0 && phase == TurnPhase.AwaitingRoll)
+            EndTurn();
+    }
+
+    void DeclareBankruptcy()
+    {
+        var debtor = Game.CurrentDebt?.Debtor;
+        if (debtor == null) return;
+
+        Game.DeclareBankruptcy(debtor);
+        phase = Game.PendingDebts.Count > 0 ? TurnPhase.SettlingDebt : TurnPhase.AwaitingRoll;
+
+        if (Game.PendingDebts.Count == 0)
+            EndTurn();
+    }
+
+    (int row, int col) GetGridPosition(int index)
+    {
+        return index switch
+        {
+            0 => (11, 11),
+            >= 1 and <= 9 => (11, 11 - index),
+            10 => (11, 1),
+            >= 11 and <= 19 => (11 - (index - 10), 1),
+            20 => (1, 1),
+            >= 21 and <= 29 => (1, 1 + (index - 20)),
+            30 => (1, 11),
+            >= 31 and <= 39 => (1 + (index - 30), 11),
+            _ => (1, 1)
+        };
+    }
+
+    (double leftPct, double topPct) GetTokenPosition(int index)
+{
+    const double corner = 14.0;
+    const double cell = (100.0 - 2 * corner) / 9.0;
+
+    double TrackCenter(int track) =>
+        track == 0 ? corner / 2 :
+        track == 10 ? 100 - corner / 2 :
+        corner + cell * (track - 1) + cell / 2;
+
+    return index switch
+    {
+        0 => (TrackCenter(10), TrackCenter(10)),
+        >= 1 and <= 9 => (TrackCenter(10 - index), TrackCenter(10)),
+        10 => (TrackCenter(0), TrackCenter(10)),
+        >= 11 and <= 19 => (TrackCenter(0), TrackCenter(10 - (index - 10))),
+        20 => (TrackCenter(0), TrackCenter(0)),
+        >= 21 and <= 29 => (TrackCenter(index - 20), TrackCenter(0)),
+        30 => (TrackCenter(10), TrackCenter(0)),
+        >= 31 and <= 39 => (TrackCenter(10), TrackCenter(index - 30)),
+        _ => (0, 0)
+    };
+}
+
+    void Quit() => Environment.Exit(0);
+}

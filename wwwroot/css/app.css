@@ -1,0 +1,88 @@
+body {
+    margin: 0;
+    font-family: sans-serif;
+    background: #04192e;
+    color: #f8f8f8;
+}
+
+.menu-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    gap: 1rem;
+}
+
+.menu-screen img.board-art {
+    max-width: 480px;
+    width: 80%;
+}
+
+.menu-screen button {
+    padding: 0.75rem 2rem;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 6px;
+    border: none;
+    background: #adc0da;
+    color: #14181c;
+}
+
+.menu-screen button:hover {
+    background: #62f7fc;
+}
+
+#blazor-error-ui {
+    display: none;
+}
+
+#blazor-error-ui.show {
+    display: block;
+}
+
+.board-wrapper {
+    position: relative;
+    width: 100%;
+    max-width: 700px;
+    aspect-ratio: 1 / 1;
+    margin: 0 auto;
+}
+
+.board-bg {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.token {
+    position: absolute;
+    width: 5%;
+    transform: translate(-50%, -50%);
+}
+
+.board-grid {
+    position: absolute;
+    inset: 0;
+    display: grid;
+    grid-template-columns: 1.6fr repeat(9, 1fr) 1.6fr;
+    grid-template-rows: 1.6fr repeat(9, 1fr) 1.6fr;
+    z-index: 1;
+}
+
+.board-space {
+    position: relative;
+    background: transparent;
+}
+
+.dice-row {
+    display: flex;
+    gap: 8px;
+    margin: 8px 0;
+}
+
+.die {
+    width: 48px;
+    height: 48px;
+}

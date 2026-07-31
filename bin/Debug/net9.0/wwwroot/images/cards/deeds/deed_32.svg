@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="400" height="300" inkscape:version="1.4.4 (dcaf3e7d9e, 2026-05-05)" sodipodi:docname="deed_32.svg" version="1.1" viewBox="0 0 105.83 79.375" xmlns="http://www.w3.org/2000/svg" xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape" xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd">
+   <sodipodi:namedview bordercolor="#eeeeee" borderopacity="1" inkscape:current-layer="svg1" inkscape:cx="195.63492" inkscape:cy="174.60317" inkscape:deskcolor="#505050" inkscape:document-units="mm" inkscape:lockguides="true" inkscape:pagecheckerboard="0" inkscape:pageopacity="0" inkscape:showpageshadow="0" inkscape:window-height="718" inkscape:window-maximized="1" inkscape:window-width="1280" inkscape:window-x="0" inkscape:window-y="0" inkscape:zoom="1.26" pagecolor="#505050"/>
+   <defs>
+      <style>.cls-1{fill-rule:evenodd;}</style>
+   </defs>
+   <g fill-rule="evenodd" stroke-linecap="square" stroke-miterlimit="1">
+      <rect x="19.529" y="5.6696" width="65.306" height="66.776" fill="#fff" stroke="#000" stroke-width=".25929"/>
+      <rect x="21.847" y="7.3581" width="61.089" height="22.662" fill="#05f" stroke="#000" stroke-width=".27632"/>
+      <g font-family="'ZT Gatha'">
+         <text transform="matrix(.26458 0 0 .26458 -.41997 3.9981)" fill="#f9f9f9" font-size="24px" letter-spacing=".38px" stroke="#000000" stroke-width=".98" text-align="center" style="line-height:1;shape-inside:url(#rect4);white-space:pre" xml:space="preserve"><tspan x="114.77597" y="70.734804">MCT630 Island</tspan></text>
+         <text transform="scale(.26458)" fill="#f9f9f9" font-size="24px" letter-spacing=".38px" stroke="#000000" stroke-width=".98" text-align="center" style="line-height:1;shape-inside:url(#rect5);white-space:pre" xml:space="preserve"/>
+         <text x="51.86673" y="33.799465" fill="#000000" font-size="3.5278px" letter-spacing=".10054px" stroke-width=".25929" text-align="center" text-anchor="middle" style="line-height:1" xml:space="preserve"><tspan x="51.917" y="33.799465" fill="#000000" font-size="3.5278px" stroke-width=".25929" sodipodi:role="line">Base Rent (Lvl. 0): ₿50</tspan></text>
+         <text transform="scale(1.1778 .84908)" x="44.219765" y="17.554279" fill="#f9f9f9" font-size="5.0972px" letter-spacing=".10376px" stroke="#000000" stroke-width=".2676" text-align="center" text-anchor="middle" style="line-height:1" xml:space="preserve"><tspan x="44.271648" y="17.554279" font-size="5.0972px" stroke-width=".2676" sodipodi:role="line">TITLE DEED</tspan></text>
+         <text transform="matrix(.26458 0 0 .26458 .62996 -2.9482)" fill="#000000" font-size="13.333px" letter-spacing=".38px" stroke-width=".98" text-align="center" style="line-height:1;shape-inside:url(#rect8);white-space:pre" xml:space="preserve"><tspan x="119.30374" y="156.49623">Investment Lvl. 1: ₿200
+</tspan><tspan x="117.61041" y="170.53843">Investment Lvl. 2: ₿600
+</tspan><tspan x="115.28708" y="184.58064">Investment Lvl. 3: ₿1400
+</tspan><tspan x="115.38709" y="198.62284">Investment Lvl. 4: ₿1700
+</tspan><tspan x="115.71042" y="212.66505">MAX Investment: ₿2000
+</tspan><tspan x="194.01359" y="225.99835">
+</tspan><tspan x="123.44377" y="240.04055">Mortgage Value ₿200
+</tspan><tspan x="90.799527" y="254.08276">Investment costs: ₿200 per Level</tspan></text>
+      </g>
+   </g>
+</svg>
