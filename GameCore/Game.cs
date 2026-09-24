@@ -125,6 +125,7 @@ public class HouseRules
     public bool PrisonGenPop { get; set; } = true;
     public bool PropertyColorGroups { get; set; }
     public bool Gentrification { get; set; }
+    public bool ArfenhouseRule { get; set; }
 }
 
 public class Card
@@ -132,12 +133,14 @@ public class Card
     public string Text { get; set; }
     public bool IsGoojf { get; set; }
     public Action<Player, Game>? Effect { get; set; }
+    public Action<Player, Game>? ArfenhouseEffect { get; set; }
 
-    public Card(string text, Action<Player, Game>? effect = null, bool isGoojf = false)
+    public Card(string text, Action<Player, Game>? effect = null, bool isGoojf = false, Action<Player, Game>? arfenhouseEffect = null)
     {
         Text = text;
         Effect = effect;
         IsGoojf = isGoojf;
+        ArfenhouseEffect = arfenhouseEffect;
     }
 }
 
@@ -193,6 +196,7 @@ public class Game
     public int LevelsAvailable { get; private set; } = 32;
     public int MaxesAvailable { get; private set; } = 12;
     public HouseRules Rules { get; } = new();
+    public Player? ArfPlayer { get; set; }
     public int ActivePlayerIndex { get; private set; }
     public string? LastCardText { get; private set; }
     public Queue<DebtEntry> PendingDebts { get; } = new();
@@ -385,6 +389,9 @@ public RollOutcome RegisterRoll(int d1, int d2)
         }
 
         card.Effect?.Invoke(player, this);
+
+        if (Rules.ArfenhouseRule && player == ArfPlayer)
+            card.ArfenhouseEffect?.Invoke(player, this);
     }
 
     public void DrawTacticsCard(Player player, int d1, int d2)
@@ -401,6 +408,9 @@ public RollOutcome RegisterRoll(int d1, int d2)
         }
 
         card.Effect?.Invoke(player, this);
+
+        if (Rules.ArfenhouseRule && player == ArfPlayer)
+            card.ArfenhouseEffect?.Invoke(player, this);
     }
 
     public bool TryPurchaseProperty(Player player, BoardSpace space)
@@ -952,6 +962,10 @@ public RollOutcome RegisterRoll(int d1, int d2)
             (p, g) => {
                 g.MovePlayerTo(p, 39, collectPayday: true);
                 g.LandOnSpace(p, 0, 0);
+            },
+            arfenhouseEffect: (p, g) => {
+                g.SendToPrison(p, PrisonStatus.GenPop, noPayday: true);
+                g.Log.Add($"On the way, {p.Name} goes to Prison on FELONY charges of smuggling fireworks onto MCT630 Island!"); // arfenhouse prison rule example
             }
         ),
         new Card(
@@ -961,6 +975,10 @@ public RollOutcome RegisterRoll(int d1, int d2)
                 p.CollectMoney(200);
                 p.GainHP();
                 Log.Add($"  {p.Name} → PAYDAY! +₿200, +1 HP  →  ₿{p.Money} | {p.HP}/6 HP");
+            },
+            arfenhouseEffect: (p, g) => {
+                g.SendToPrison(p, PrisonStatus.MinimumSecurity, noPayday: true);
+                g.Log.Add($"Also, {p.Name} is found guilty on misdeameanor \"Work Hack\" possession charges, and goes straight to Minimum Security Prison!"); // arfenhouse prison rule example
             }
         ),
         new Card(
@@ -991,7 +1009,11 @@ public RollOutcome RegisterRoll(int d1, int d2)
                     g.TryPay(p, rent, space.Owner);
                 }
                 else g.LandOnSpace(p, 0, 0);
-            }
+            },
+            arfenhouseEffect: (p, g) => { 
+                g.TryPay(p, 10, null); 
+                Log.Add($"  {p.Name} has to pay ₿10 in fines for trying to jump the gate.");
+            } //Arfenhouse rule $10 fee
         ),
         new Card(
             "Advance to whichever is closest: Buford T. Justice Memorial Courthouse or Saint Huck's Hospital. If owned, roll and pay owner 10× that roll.",
@@ -1015,11 +1037,18 @@ public RollOutcome RegisterRoll(int d1, int d2)
             (p, g) => {
                 g.MovePlayerTo(p, 5, collectPayday: true);
                 g.LandOnSpace(p, 0, 0);
-            }
+            }, arfenhouseEffect: (p, g) => { 
+                g.TryPay(p, 10, null); 
+                Log.Add($"  {p.Name} has to pay ₿10 in fines for trying to jump the gate.");
+            } //Arfenhouse rule $10 fee
         ),
         new Card(
             "Insider trading tip pays off! Collect ₿50.",
-            (p, g) => { p.CollectMoney(50); Log.Add($"  {p.Name} collects ₿50 → ₿{p.Money}"); }
+            (p, g) => { p.CollectMoney(50); Log.Add($"  {p.Name} collects ₿50 → ₿{p.Money}"); }, 
+            arfenhouseEffect: (p, g) => {
+                g.SendToPrison(p, PrisonStatus.MinimumSecurity, noPayday: true);
+                g.Log.Add($"Also, {p.Name} is found guilty insider trading, and goes straight to Minimum Security Prison!"); // arfenhouse prison rule example
+            }
         ),
         new Card(
             "Go Back 3 Spaces!",
@@ -1032,7 +1061,11 @@ public RollOutcome RegisterRoll(int d1, int d2)
         ),
         new Card(
             "Uh OH! You were caught doing a FELONY! Go directly to PRISON's Gen Pop. No Payday!",
-            (p, g) => g.SendToPrison(p, PrisonStatus.GenPop, noPayday: true)
+            (p, g) => g.SendToPrison(p, PrisonStatus.GenPop, noPayday: true),
+            arfenhouseEffect: (p, g) => { 
+                g.TryPay(p, 100, null); 
+                Log.Add($"  {p.Name} also has to pay ₿100 in fines.");
+            } //Arfenhouse rule $100 fee
         ),
         new Card(
             "Bloodsucking HOA Fees! For each property Lv.1 or higher, pay ₿25 per level.",
@@ -1051,7 +1084,11 @@ public RollOutcome RegisterRoll(int d1, int d2)
         ),
         new Card(
             "Pay each player ₿50 to keep quiet about the Diddy Party you went to back in 2005.",
-            (p, g) => g.PayAllPlayers(p, 50)
+            (p, g) => g.PayAllPlayers(p, 50),
+            arfenhouseEffect: (p, g) => {
+                g.SendToPrison(p, PrisonStatus.GenPop, noPayday: true);
+                g.Log.Add($"Meanwhile, {p.Name} goes to Prison on FELONY charges for what THEY did at the Diddy Party back in 2005!"); // arfenhouse prison rule example
+            }
         ),
         new Card(
             "You shorted the market and made a profit! Collect ₿150.",
@@ -1163,8 +1200,12 @@ public RollOutcome RegisterRoll(int d1, int d2)
             (p, g) => { p.CollectMoney(20); Log.Add($"  {p.Name} collects ₿20 → ₿{p.Money}"); }
         ),
         new Card(
-            "Talk everyone into a Multi-Level Marketing CBD cart scam! Collect ₿10 from each player.",
-            (p, g) => g.CollectFromAll(p, 10)
+            "Talk everyone into a multi-level marketing CBD cart scam! Collect ₿10 from each player.",
+            (p, g) => g.CollectFromAll(p, 10),
+            arfenhouseEffect: (p, g) => { 
+                g.TryPay(p, 50, null); 
+                Log.Add($"  {p.Name} gets hooked, buys ₿50 in bad carts and loses 1 HP.");
+            } //Arfenhouse rule - NEED TO IMPLEMENT HP LOSS
         ),
         new Card(
             "Your Pump-And-Dump property scam with Saudi investors pays off! Receive ₿100.",

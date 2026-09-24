@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SWTIWOOCMTG")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+7f351b1782637ba9094129ca9dfeb02398254bca")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+32aa63127e8e4d33d51112cd9bd4a31239bd2991")]
 [assembly: System.Reflection.AssemblyProductAttribute("SWTIWOOCMTG")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SWTIWOOCMTG")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

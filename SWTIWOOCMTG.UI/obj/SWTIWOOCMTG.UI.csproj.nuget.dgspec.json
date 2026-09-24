@@ -1,0 +1,140 @@
+{
+  "format": 1,
+  "restore": {
+    "/home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.UI/SWTIWOOCMTG.UI.csproj": {}
+  },
+  "projects": {
+    "/home/deck/CsharpProjects/SWTIWOOCMTG/GameCore/GameCore.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/deck/CsharpProjects/SWTIWOOCMTG/GameCore/GameCore.csproj",
+        "projectName": "GameCore",
+        "projectPath": "/home/deck/CsharpProjects/SWTIWOOCMTG/GameCore/GameCore.csproj",
+        "packagesPath": "/home/deck/.nuget/packages/",
+        "outputPath": "/home/deck/CsharpProjects/SWTIWOOCMTG/GameCore/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/deck/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "framework": "net9.0",
+            "targetAlias": "net9.0",
+            "projectReferences": {}
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "framework": "net9.0",
+          "targetAlias": "net9.0",
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/deck/.dotnet/sdk/10.0.301/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    },
+    "/home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.UI/SWTIWOOCMTG.UI.csproj": {
+      "version": "1.0.0",
+      "restore": {
+        "projectUniqueName": "/home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.UI/SWTIWOOCMTG.UI.csproj",
+        "projectName": "SWTIWOOCMTG.UI",
+        "projectPath": "/home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.UI/SWTIWOOCMTG.UI.csproj",
+        "packagesPath": "/home/deck/.nuget/packages/",
+        "outputPath": "/home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.UI/obj/",
+        "projectStyle": "PackageReference",
+        "configFilePaths": [
+          "/home/deck/.nuget/NuGet/NuGet.Config"
+        ],
+        "originalTargetFrameworks": [
+          "net9.0"
+        ],
+        "sources": {
+          "https://api.nuget.org/v3/index.json": {}
+        },
+        "frameworks": {
+          "net9.0": {
+            "framework": "net9.0",
+            "targetAlias": "net9.0",
+            "projectReferences": {
+              "/home/deck/CsharpProjects/SWTIWOOCMTG/GameCore/GameCore.csproj": {
+                "projectPath": "/home/deck/CsharpProjects/SWTIWOOCMTG/GameCore/GameCore.csproj"
+              }
+            }
+          }
+        },
+        "warningProperties": {
+          "warnAsError": [
+            "NU1605"
+          ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
+        },
+        "SdkAnalysisLevel": "10.0.300"
+      },
+      "frameworks": {
+        "net9.0": {
+          "framework": "net9.0",
+          "targetAlias": "net9.0",
+          "dependencies": {
+            "Microsoft.AspNetCore.Components.Web": {
+              "target": "Package",
+              "version": "[9.0.17, )"
+            }
+          },
+          "imports": [
+            "net461",
+            "net462",
+            "net47",
+            "net471",
+            "net472",
+            "net48",
+            "net481"
+          ],
+          "assetTargetFallback": true,
+          "warn": true,
+          "frameworkReferences": {
+            "Microsoft.NETCore.App": {
+              "privateAssets": "all"
+            }
+          },
+          "runtimeIdentifierGraphPath": "/home/deck/.dotnet/sdk/10.0.301/PortableRuntimeIdentifierGraph.json"
+        }
+      }
+    }
+  }
+}

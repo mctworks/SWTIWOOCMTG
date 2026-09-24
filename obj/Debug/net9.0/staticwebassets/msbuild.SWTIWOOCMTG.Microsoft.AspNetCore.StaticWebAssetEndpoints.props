@@ -1,16 +1,16 @@
 ﻿<Project>
   <ItemGroup>
+    <StaticWebAssetEndpoint Include="_content/SWTIWOOCMTG/css/app.a7zc73chac.css">
+      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\app.css'))</AssetFile>
+      <Selectors><![CDATA[[]]]></Selectors>
+      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"a7zc73chac"},{"Name":"integrity","Value":"sha256-NpAd2jIQSS5VDS7/Z1ZhJZUM5whwI5Mu7gUZV189ZMs="},{"Name":"label","Value":"_content/SWTIWOOCMTG/css/app.css"}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1332"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022NpAd2jIQSS5VDS7/Z1ZhJZUM5whwI5Mu7gUZV189ZMs=\u0022"},{"Name":"Last-Modified","Value":"Fri, 31 Jul 2026 05:00:07 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
+    </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/SWTIWOOCMTG/css/app.css">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\app.css'))</AssetFile>
       <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-M5i0Xkv91bcjUKbmoepkHY1FWyx1tKAPoHhRBosASnM="}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1329"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022M5i0Xkv91bcjUKbmoepkHY1FWyx1tKAPoHhRBosASnM=\u0022"},{"Name":"Last-Modified","Value":"Thu, 23 Jul 2026 22:18:42 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
-    </StaticWebAssetEndpoint>
-    <StaticWebAssetEndpoint Include="_content/SWTIWOOCMTG/css/app.ruadkvnx0s.css">
-      <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\app.css'))</AssetFile>
-      <Selectors><![CDATA[[]]]></Selectors>
-      <EndpointProperties><![CDATA[[{"Name":"fingerprint","Value":"ruadkvnx0s"},{"Name":"integrity","Value":"sha256-M5i0Xkv91bcjUKbmoepkHY1FWyx1tKAPoHhRBosASnM="},{"Name":"label","Value":"_content/SWTIWOOCMTG/css/app.css"}]]]></EndpointProperties>
-      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"max-age=31536000, immutable"},{"Name":"Content-Length","Value":"1329"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022M5i0Xkv91bcjUKbmoepkHY1FWyx1tKAPoHhRBosASnM=\u0022"},{"Name":"Last-Modified","Value":"Thu, 23 Jul 2026 22:18:42 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
+      <EndpointProperties><![CDATA[[{"Name":"integrity","Value":"sha256-NpAd2jIQSS5VDS7/Z1ZhJZUM5whwI5Mu7gUZV189ZMs="}]]]></EndpointProperties>
+      <ResponseHeaders><![CDATA[[{"Name":"Cache-Control","Value":"no-cache"},{"Name":"Content-Length","Value":"1332"},{"Name":"Content-Type","Value":"text/css"},{"Name":"ETag","Value":"\u0022NpAd2jIQSS5VDS7/Z1ZhJZUM5whwI5Mu7gUZV189ZMs=\u0022"},{"Name":"Last-Modified","Value":"Fri, 31 Jul 2026 05:00:07 GMT"},{"Name":"Vary","Value":"Accept-Encoding"}]]]></ResponseHeaders>
     </StaticWebAssetEndpoint>
     <StaticWebAssetEndpoint Include="_content/SWTIWOOCMTG/images/board-logo.9p0b2y85ym.svg">
       <AssetFile>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\board-logo.svg'))</AssetFile>

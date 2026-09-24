@@ -1,0 +1,29 @@
+{
+  "Files": [
+    {
+      "Id": "/home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.Desktop/wwwroot/index.html",
+      "PackagePath": "staticwebassets/index.html"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.SWTIWOOCMTG.Desktop.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.SWTIWOOCMTG.Desktop.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.build.SWTIWOOCMTG.Desktop.props",
+      "PackagePath": "build\\SWTIWOOCMTG.Desktop.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.buildMultiTargeting.SWTIWOOCMTG.Desktop.props",
+      "PackagePath": "buildMultiTargeting\\SWTIWOOCMTG.Desktop.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.buildTransitive.SWTIWOOCMTG.Desktop.props",
+      "PackagePath": "buildTransitive\\SWTIWOOCMTG.Desktop.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

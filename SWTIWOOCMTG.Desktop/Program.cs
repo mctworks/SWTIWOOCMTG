@@ -1,6 +1,7 @@
 using Microsoft.Extensions.DependencyInjection;
 using Photino.Blazor;
 using SWTIWOOCMTG;
+using SWTIWOOCMTG.UI;   // App
 
 var appBuilder = PhotinoBlazorAppBuilder.CreateDefault(args);
 

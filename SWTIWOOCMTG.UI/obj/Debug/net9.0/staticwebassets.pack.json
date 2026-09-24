@@ -1,0 +1,121 @@
+{
+  "Files": [
+    {
+      "Id": "/home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.UI/wwwroot/css/app.css",
+      "PackagePath": "staticwebassets/css/app.css"
+    },
+    {
+      "Id": "/home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.UI/wwwroot/images/board-logo.svg",
+      "PackagePath": "staticwebassets/images/board-logo.svg"
+    },
+    {
+      "Id": "/home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.UI/wwwroot/images/cards/deeds/deed_32.svg",
+      "PackagePath": "staticwebassets/images/cards/deeds/deed_32.svg"
+    },
+    {
+      "Id": "/home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.UI/wwwroot/images/cards/deeds/template.svg",
+      "PackagePath": "staticwebassets/images/cards/deeds/template.svg"
+    },
+    {
+      "Id": "/home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.UI/wwwroot/images/reddice_1.svg",
+      "PackagePath": "staticwebassets/images/reddice_1.svg"
+    },
+    {
+      "Id": "/home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.UI/wwwroot/images/reddice_2.svg",
+      "PackagePath": "staticwebassets/images/reddice_2.svg"
+    },
+    {
+      "Id": "/home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.UI/wwwroot/images/reddice_3.svg",
+      "PackagePath": "staticwebassets/images/reddice_3.svg"
+    },
+    {
+      "Id": "/home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.UI/wwwroot/images/reddice_4.svg",
+      "PackagePath": "staticwebassets/images/reddice_4.svg"
+    },
+    {
+      "Id": "/home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.UI/wwwroot/images/reddice_5.svg",
+      "PackagePath": "staticwebassets/images/reddice_5.svg"
+    },
+    {
+      "Id": "/home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.UI/wwwroot/images/reddice_6.svg",
+      "PackagePath": "staticwebassets/images/reddice_6.svg"
+    },
+    {
+      "Id": "/home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.UI/wwwroot/images/token1.svg",
+      "PackagePath": "staticwebassets/images/token1.svg"
+    },
+    {
+      "Id": "/home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.UI/wwwroot/images/token2.svg",
+      "PackagePath": "staticwebassets/images/token2.svg"
+    },
+    {
+      "Id": "/home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.UI/wwwroot/images/token3.svg",
+      "PackagePath": "staticwebassets/images/token3.svg"
+    },
+    {
+      "Id": "/home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.UI/wwwroot/images/token4.svg",
+      "PackagePath": "staticwebassets/images/token4.svg"
+    },
+    {
+      "Id": "/home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.UI/wwwroot/images/token5.svg",
+      "PackagePath": "staticwebassets/images/token5.svg"
+    },
+    {
+      "Id": "/home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.UI/wwwroot/images/token6.svg",
+      "PackagePath": "staticwebassets/images/token6.svg"
+    },
+    {
+      "Id": "/home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.UI/wwwroot/images/token7.svg",
+      "PackagePath": "staticwebassets/images/token7.svg"
+    },
+    {
+      "Id": "/home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.UI/wwwroot/images/token8.svg",
+      "PackagePath": "staticwebassets/images/token8.svg"
+    },
+    {
+      "Id": "/home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.UI/wwwroot/images/whitedice_1.svg",
+      "PackagePath": "staticwebassets/images/whitedice_1.svg"
+    },
+    {
+      "Id": "/home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.UI/wwwroot/images/whitedice_2.svg",
+      "PackagePath": "staticwebassets/images/whitedice_2.svg"
+    },
+    {
+      "Id": "/home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.UI/wwwroot/images/whitedice_3.svg",
+      "PackagePath": "staticwebassets/images/whitedice_3.svg"
+    },
+    {
+      "Id": "/home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.UI/wwwroot/images/whitedice_4.svg",
+      "PackagePath": "staticwebassets/images/whitedice_4.svg"
+    },
+    {
+      "Id": "/home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.UI/wwwroot/images/whitedice_5.svg",
+      "PackagePath": "staticwebassets/images/whitedice_5.svg"
+    },
+    {
+      "Id": "/home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.UI/wwwroot/images/whitedice_6.svg",
+      "PackagePath": "staticwebassets/images/whitedice_6.svg"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.SWTIWOOCMTG.UI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.SWTIWOOCMTG.UI.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.build.SWTIWOOCMTG.UI.props",
+      "PackagePath": "build\\SWTIWOOCMTG.UI.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.buildMultiTargeting.SWTIWOOCMTG.UI.props",
+      "PackagePath": "buildMultiTargeting\\SWTIWOOCMTG.UI.props"
+    },
+    {
+      "Id": "obj/Debug/net9.0/staticwebassets/msbuild.buildTransitive.SWTIWOOCMTG.UI.props",
+      "PackagePath": "buildTransitive\\SWTIWOOCMTG.UI.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

@@ -1,0 +1,12 @@
+/home/deck/CsharpProjects/SWTIWOOCMTG/GameCore/bin/Debug/net9.0/GameCore.deps.json
+/home/deck/CsharpProjects/SWTIWOOCMTG/GameCore/bin/Debug/net9.0/GameCore.dll
+/home/deck/CsharpProjects/SWTIWOOCMTG/GameCore/bin/Debug/net9.0/GameCore.pdb
+/home/deck/CsharpProjects/SWTIWOOCMTG/GameCore/obj/Debug/net9.0/GameCore.GeneratedMSBuildEditorConfig.editorconfig
+/home/deck/CsharpProjects/SWTIWOOCMTG/GameCore/obj/Debug/net9.0/GameCore.AssemblyInfoInputs.cache
+/home/deck/CsharpProjects/SWTIWOOCMTG/GameCore/obj/Debug/net9.0/GameCore.AssemblyInfo.cs
+/home/deck/CsharpProjects/SWTIWOOCMTG/GameCore/obj/Debug/net9.0/GameCore.csproj.CoreCompileInputs.cache
+/home/deck/CsharpProjects/SWTIWOOCMTG/GameCore/obj/Debug/net9.0/GameCore.sourcelink.json
+/home/deck/CsharpProjects/SWTIWOOCMTG/GameCore/obj/Debug/net9.0/GameCore.dll
+/home/deck/CsharpProjects/SWTIWOOCMTG/GameCore/obj/Debug/net9.0/refint/GameCore.dll
+/home/deck/CsharpProjects/SWTIWOOCMTG/GameCore/obj/Debug/net9.0/GameCore.pdb
+/home/deck/CsharpProjects/SWTIWOOCMTG/GameCore/obj/Debug/net9.0/ref/GameCore.dll

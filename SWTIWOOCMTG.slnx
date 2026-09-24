@@ -1,0 +1,5 @@
+<Solution>
+  <Project Path="GameCore/GameCore.csproj" />
+  <Project Path="SWTIWOOCMTG.Desktop/SWTIWOOCMTG.Desktop.csproj" />
+  <Project Path="SWTIWOOCMTG.UI/SWTIWOOCMTG.UI.csproj" />
+</Solution>

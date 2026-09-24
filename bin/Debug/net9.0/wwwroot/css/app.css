@@ -1,8 +1,8 @@
 body {
     margin: 0;
     font-family: sans-serif;
-    background: #14181c;
-    color: #eee;
+    background: #04192e;
+    color: #f8f8f8;
 }
 
 .menu-screen {
@@ -25,12 +25,12 @@ body {
     cursor: pointer;
     border-radius: 6px;
     border: none;
-    background: #d4af37;
+    background: #adc0da;
     color: #14181c;
 }
 
 .menu-screen button:hover {
-    background: #e8c454;
+    background: #62f7fc;
 }
 
 #blazor-error-ui {

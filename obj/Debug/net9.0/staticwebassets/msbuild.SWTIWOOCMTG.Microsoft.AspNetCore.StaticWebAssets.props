@@ -12,12 +12,12 @@
       <RelatedAsset></RelatedAsset>
       <AssetTraitName></AssetTraitName>
       <AssetTraitValue></AssetTraitValue>
-      <Fingerprint>ruadkvnx0s</Fingerprint>
-      <Integrity>M5i0Xkv91bcjUKbmoepkHY1FWyx1tKAPoHhRBosASnM=</Integrity>
+      <Fingerprint>a7zc73chac</Fingerprint>
+      <Integrity>NpAd2jIQSS5VDS7/Z1ZhJZUM5whwI5Mu7gUZV189ZMs=</Integrity>
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
       <CopyToPublishDirectory>PreserveNewest</CopyToPublishDirectory>
-      <FileLength>1329</FileLength>
-      <LastWriteTime>Thu, 23 Jul 2026 22:18:42 GMT</LastWriteTime>
+      <FileLength>1332</FileLength>
+      <LastWriteTime>Fri, 31 Jul 2026 05:00:07 GMT</LastWriteTime>
       <OriginalItemSpec>$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\css\app.css'))</OriginalItemSpec>
     </StaticWebAsset>
     <StaticWebAsset Include="$([System.IO.Path]::GetFullPath('$(MSBuildThisFileDirectory)..\staticwebassets\images\board-logo.svg'))">

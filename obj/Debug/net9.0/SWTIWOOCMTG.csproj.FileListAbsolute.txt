@@ -99,7 +99,6 @@
 /home/deck/CsharpProjects/SWTIWOOCMTG/obj/Debug/net9.0/rjsmrazor.dswa.cache.json
 /home/deck/CsharpProjects/SWTIWOOCMTG/obj/Debug/net9.0/rjsmcshtml.dswa.cache.json
 /home/deck/CsharpProjects/SWTIWOOCMTG/obj/Debug/net9.0/scopedcss/bundle/SWTIWOOCMTG.styles.css
-/home/deck/CsharpProjects/SWTIWOOCMTG/obj/Debug/net9.0/compressed/sofw4dvk3y-{0}-ruadkvnx0s-ruadkvnx0s.gz
 /home/deck/CsharpProjects/SWTIWOOCMTG/obj/Debug/net9.0/compressed/evnd6v9lnr-{0}-9p0b2y85ym-9p0b2y85ym.gz
 /home/deck/CsharpProjects/SWTIWOOCMTG/obj/Debug/net9.0/compressed/4xfgjoftdg-{0}-kow5cfaacv-kow5cfaacv.gz
 /home/deck/CsharpProjects/SWTIWOOCMTG/obj/Debug/net9.0/compressed/l4fl5g31u4-{0}-nm7n3k365d-nm7n3k365d.gz
@@ -145,3 +144,4 @@
 /home/deck/CsharpProjects/SWTIWOOCMTG/obj/Debug/net9.0/compressed/ssxd5nmlay-{0}-9beimjfpop-9beimjfpop.gz
 /home/deck/CsharpProjects/SWTIWOOCMTG/obj/Debug/net9.0/compressed/8tbzxgzglc-{0}-vywe14wcqc-vywe14wcqc.gz
 /home/deck/CsharpProjects/SWTIWOOCMTG/obj/Debug/net9.0/compressed/9qjgiya17w-{0}-0ixhjp7obn-0ixhjp7obn.gz
+/home/deck/CsharpProjects/SWTIWOOCMTG/obj/Debug/net9.0/compressed/sofw4dvk3y-{0}-a7zc73chac-a7zc73chac.gz

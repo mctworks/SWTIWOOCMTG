@@ -23,16 +23,20 @@ build_property._RazorSourceGeneratorDebug =
 build_property.EffectiveAnalysisLevelStyle = 9.0
 build_property.EnableCodeStyleSeverity = 
 
-[/home/deck/CsharpProjects/SWTIWOOCMTG/App.razor]
-build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
+[/home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.UI/App.razor]
+build_metadata.AdditionalFiles.TargetPath = U1dUSVdPT0NNVEcuVUkvQXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/deck/CsharpProjects/SWTIWOOCMTG/Pages/Home.razor]
-build_metadata.AdditionalFiles.TargetPath = UGFnZXMvSG9tZS5yYXpvcg==
+[/home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.UI/Pages/Home.razor]
+build_metadata.AdditionalFiles.TargetPath = U1dUSVdPT0NNVEcuVUkvUGFnZXMvSG9tZS5yYXpvcg==
 build_metadata.AdditionalFiles.CssScope = 
 
-[/home/deck/CsharpProjects/SWTIWOOCMTG/Shared/MainLayout.razor]
-build_metadata.AdditionalFiles.TargetPath = U2hhcmVkL01haW5MYXlvdXQucmF6b3I=
+[/home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.UI/Shared/MainLayout.razor]
+build_metadata.AdditionalFiles.TargetPath = U1dUSVdPT0NNVEcuVUkvU2hhcmVkL01haW5MYXlvdXQucmF6b3I=
+build_metadata.AdditionalFiles.CssScope = 
+
+[/home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.UI/_Imports.razor]
+build_metadata.AdditionalFiles.TargetPath = U1dUSVdPT0NNVEcuVUkvX0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
 [/home/deck/CsharpProjects/SWTIWOOCMTG/_Imports.razor]
