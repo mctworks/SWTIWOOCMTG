@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("GameCore")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+32aa63127e8e4d33d51112cd9bd4a31239bd2991")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+8ce66f33e04d0578da84968fd20dcff643606ed4")]
 [assembly: System.Reflection.AssemblyProductAttribute("GameCore")]
 [assembly: System.Reflection.AssemblyTitleAttribute("GameCore")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

@@ -1,287 +1,619 @@
-[RISK] First Class Ticket to MCT630 Island. (Look out for blinding neon lights!)
-Leo lands on MCT630 Island.
-Raph lands on Lebowski Boulevard.
-Don lands on Toad Suck Park.
-Leo lands on Lebowski Boulevard.
-Leo pays ₿8 rent to Raph for Lebowski Boulevard.
-Raph lands on The Swan.
-Raph lands on Truxton Trickham Boulevard.
-Don lands on Soucross Place.
+CPU CPU No.5 has been chosen as this game's stupid butthole.
+[RISK] Take a Bullet Train to Five Spoons Square! (If you pass Payday, Recover 1HP and Collect ₿200)
+MCT630(Human) lands on Five Spoons Square.
+CPU No.1 lands on Toad Suck Park.
+[TACTICS] Someone living on White Avenue who likes to ride the white train going towards the airport has been hissing about you and all the barking from your dogs. They're not going to shut up until they syphon some money from you.
+CPU No.3 lands on Lebowski Boulevard.
+CPU No.4 lands on Lebowski Boulevard.
+CPU No.4 pays ₿8 rent to CPU No.3 for Lebowski Boulevard.
+[RISK] Pay the city ₿15 for permit fees.
+  CPU No.6 pays ₿15 in permit fees.
+[RISK] Bloodsucking HOA Fees! For each property Lv.1 or higher, pay ₿25 per level.
+  HOA Fees: ₿0
+[TACTICS] Internet celebrity memecoin rugpull scam did numbers! Receive ₿200.
+  MCT630(Human) collects ₿200 → ₿1460
+CPU No.1 lands on The Swan.
+[RISK] Insider trading tip pays off! Collect ₿50.
+  CPU No.2 collects ₿50 → ₿1550
+CPU No.4 lands on Dick Valentine International Airport.
+CPU CPU No.5 lands on The Swan.
+CPU CPU No.5 pays ₿10 rent to CPU No.1 for The Swan.
+CPU No.6 lands on University Square.
+CPU No.6 lands on Walter Hills.
+[TACTICS] Tried to run your business with AI with no returns! Pay ₿150 in token fees!
+  CPU No.7 pays ₿150 in AI token fees.
+CPU No.1 lands on Five Spoons Square.
+CPU No.1 pays ₿20 rent to MCT630(Human) for Five Spoons Square.
+CPU No.2 lands on Dobbs Vineyard.
+[RISK] You shorted the market and made a profit! Collect ₿150.
+  CPU No.3 collects ₿150 → ₿2053
+[TACTICS] Receive ₿25 in consultancy fees for a startup you never even heard of.
+  CPU No.3 collects ₿25 → ₿2078
+CPU No.4 lands on Five Spoons Square.
+CPU No.4 pays ₿20 rent to MCT630(Human) for Five Spoons Square.
+CPU CPU No.5 lands on Lily Pippa Park.
+CPU No.7 lands on Red Light District.
+MCT630(Human) lands on The Hotel Mary Chang.
+[TACTICS] You hold Fyre Festival III! Collect ₿50 from each player! Each paying player loses 1 HP.
+CPU No.3 lands on Studio Anni Plaza.
+CPU No.4 lands on The Iguana Nightclub.
+CPU No.6 lands on MCT630 Island.
+CPU No.7 lands on Walter Hills.
+CPU No.7 pays ₿22 rent to CPU No.6 for Walter Hills.
+CPU No.7 lands on North Sobochek Avenue.
+MCT630(Human) upgrades Five Spoons Square to Lv.1.
+MCT630(Human) upgrades The Hotel Mary Chang to Lv.1.
+MCT630(Human) lands on Soucross Place.
+CPU No.1 paid ₿50 bail and is free.
+CPU No.1 lands on Racist Ass Rock.
+CPU No.2 pays ₿25 rent to CPU CPU No.5 for Metro Rail Blue Line.
+[RISK] Advance to the nearest Metro Rail Station! If unowned, you may buy it. If owned, roll and pay owner 10× that roll.
+[TACTICS] Talk everyone into a multi-level marketing CBD cart scam! Collect ₿10 from each player.
+CPU CPU No.5 lands on Soucross Place.
+CPU CPU No.5 pays ₿10 rent to MCT630(Human) for Soucross Place.
+CPU No.7 lands on Lucy's Trailer Park.
+MCT630(Human) upgrades Soucross Place to Lv.1.
+[TACTICS] Insurance didn't cover the adhesive bandage you needed last checkup. Pay ₿50.
+  MCT630(Human) pays ₿50.
+CPU No.1 lands on Dobbs Vineyard.
+CPU No.1 pays ₿24 rent to CPU No.2 for Dobbs Vineyard.
+CPU No.3 lands on Truxton Trickham Boulevard.
+CPU No.4 pays ₿100 rent to CPU No.2 for Buford T. Justice Memorial Courthouse.
 [TACTICS] Bought an overpriced luxury electric vehicle that looks like it was designed by the SNES FX Chip. Pay ₿100 in out-of-state car insurance.
-  Leo pays ₿100.
+  CPU CPU No.5 pays ₿100.
+CPU No.6 lands on Lebowski Boulevard.
+CPU No.6 pays ₿8 rent to CPU No.3 for Lebowski Boulevard.
+CPU No.7 lands on Lebowski Boulevard.
+CPU No.7 pays ₿8 rent to CPU No.3 for Lebowski Boulevard.
+MCT630(Human) lands on Truxton Trickham Boulevard.
+MCT630(Human) pays ₿18 rent to CPU No.3 for Truxton Trickham Boulevard.
+CPU No.1 pays ₿25 rent to CPU No.6 for Metro Rail Gold Line.
+CPU No.2 lands on The Iguana Nightclub.
+CPU No.2 pays ₿26 rent to CPU No.4 for The Iguana Nightclub.
+CPU No.3 lands on Walter Hills.
+CPU No.3 pays ₿22 rent to CPU No.6 for Walter Hills.
+CPU No.4 lands on Dick Valentine International Airport.
+[TACTICS] Successfully cooked the books this tax season! Collect ₿20.
+  CPU No.6 collects ₿20 → ₿546
+CPU No.7 lands on Racist Ass Rock.
+CPU No.7 pays ₿14 rent to CPU No.1 for Racist Ass Rock.
+MCT630(Human) pays ₿25 rent to CPU No.6 for Metro Rail Gold Line.
+[RISK] Jeepers, you got caught doing a MISDEMEANOR! Go directly to PRISON's Minimum Security. No Payday!
+CPU No.4 lands on Lily Pippa Park.
+CPU No.4 pays ₿22 rent to CPU CPU No.5 for Lily Pippa Park.
+CPU No.4 paid ₿50 bail and is free.
+CPU No.4 lands on Dick Valentine International Airport.
+CPU CPU No.5 pays ₿30 rent to MCT630(Human) for Saint Huck's Hospital.
+CPU No.6 lands on Five Spoons Square.
+CPU No.6 pays ₿100 rent to MCT630(Human) for Five Spoons Square.
+CPU No.7 lands on Red Light District.
+MCT630(Human) lands on Studio Anni Plaza.
+MCT630(Human) pays ₿35 rent to CPU No.3 for Studio Anni Plaza.
+MCT630(Human) pays ₿50 rent to CPU CPU No.5 for Metro Rail Blue Line.
+[RISK] Advance to whichever is closest: Buford T. Justice Memorial Courthouse or Saint Huck's Hospital. If owned, roll and pay owner 10× that roll.
+  Special Fees: [2]+[1]=3 × 10 = ₿30 → CPU No.2
+CPU No.2 lands on Toad Suck Park.
+CPU No.2 pays ₿6 rent to CPU No.1 for Toad Suck Park.
+CPU No.2 pays ₿25 rent to CPU No.3 for Metro Rail White Line.
+CPU No.3 paid ₿25 bail and is free.
+CPU No.3 lands on White Avenue.
+CPU No.4 lands on Truxton Trickham Boulevard.
+CPU No.4 pays ₿18 rent to CPU No.3 for Truxton Trickham Boulevard.
+CPU CPU No.5 lands on North Sobochek Avenue.
+CPU CPU No.5 pays ₿26 rent to CPU No.7 for North Sobochek Avenue.
+CPU CPU No.5 lands on MCT630 Island.
+CPU CPU No.5 pays ₿50 rent to CPU No.6 for MCT630 Island.
+CPU No.6 lands on The Iguana Nightclub.
+CPU No.6 pays ₿26 rent to CPU No.4 for The Iguana Nightclub.
+CPU No.7 lands on The Iguana Nightclub.
+CPU No.7 pays ₿26 rent to CPU No.4 for The Iguana Nightclub.
+CPU No.7 lands on MCT630 Island.
+CPU No.7 pays ₿50 rent to CPU No.6 for MCT630 Island.
+MCT630(Human) upgrades Five Spoons Square to Lv.2.
+MCT630(Human) pays ₿25 rent to CPU No.3 for Metro Rail White Line.
+MCT630(Human) lands on Five Spoons Square.
+[TACTICS] Blackmailed the pedophile president into giving you a pardon after showing video of him with both a horse AND Bill Clinton on Epstein Island. GET OUT OF JAIL FOR FREE! Keep it, use it to get out of a PRISON situation.
+CPU No.1 keeps this as a Get Out of Jail Free card.
+CPU No.3 lands on Red Light District.
+CPU No.3 pays ₿18 rent to CPU No.7 for Red Light District.
+CPU No.4 lands on Lily Pippa Park.
+CPU No.4 pays ₿22 rent to CPU CPU No.5 for Lily Pippa Park.
+CPU CPU No.5 lands on Toad Suck Park.
+CPU CPU No.5 pays ₿6 rent to CPU No.1 for Toad Suck Park.
+CPU No.6 lands on MCT630 Island.
+CPU No.7 lands on Toad Suck Park.
+CPU No.7 pays ₿6 rent to CPU No.1 for Toad Suck Park.
+MCT630(Human) lands on The Iguana Nightclub.
+MCT630(Human) pays ₿26 rent to CPU No.4 for The Iguana Nightclub.
+CPU No.1 lands on Red Light District.
+CPU No.1 pays ₿18 rent to CPU No.7 for Red Light District.
+CPU No.2 lands on Red Light District.
+CPU No.2 pays ₿18 rent to CPU No.7 for Red Light District.
+CPU No.3 lands on North Sobochek Avenue.
+CPU No.3 pays ₿26 rent to CPU No.7 for North Sobochek Avenue.
+CPU No.4 lands on The Hotel Mary Chang.
+CPU No.4 pays ₿30 rent to MCT630(Human) for The Hotel Mary Chang.
+CPU CPU No.5 lands on Dick Valentine International Airport.
+CPU CPU No.5 pays ₿14 rent to CPU No.4 for Dick Valentine International Airport.
+CPU No.6 lands on Lebowski Boulevard.
+CPU No.6 pays ₿8 rent to CPU No.3 for Lebowski Boulevard.
+CPU No.7 lands on Dick Valentine International Airport.
+CPU No.7 pays ₿14 rent to CPU No.4 for Dick Valentine International Airport.
+[TACTICS] From frivolous PPP government loans invested into a GPU manufacturer, you earn ₿50!
+  CPU No.1 collects ₿50 → ₿1045
 [TACTICS] You won a libel case against an online shitposter who resides in the UK! Collect ₿10.
-  Mike collects ₿10 → ₿1160
-Raph lands on Walter Hills.
-Raph lands on Buckingham Green.
+  CPU No.2 collects ₿10 → ₿3624
+CPU No.3 lands on Studio Anni Plaza.
+CPU No.4 pays ₿25 rent to CPU No.3 for Metro Rail White Line.
+CPU CPU No.5 lands on Red Light District.
+CPU CPU No.5 pays ₿18 rent to CPU No.7 for Red Light District.
+CPU No.6 lands on Racist Ass Rock.
+CPU No.6 pays ₿14 rent to CPU No.1 for Racist Ass Rock.
+CPU No.7 lands on Red Light District.
+MCT630(Human) lands on Cummings Avenue.
+CPU No.2 lands on Lucy's Trailer Park.
+CPU No.2 pays ₿2 rent to CPU No.7 for Lucy's Trailer Park.
+CPU No.2 lands on Soucross Place.
+CPU No.2 pays ₿50 rent to MCT630(Human) for Soucross Place.
+CPU No.3 pays ₿50 rent to CPU CPU No.5 for Metro Rail Blue Line.
+CPU No.4 pays ₿50 rent to CPU CPU No.5 for Metro Rail Red Line.
+CPU CPU No.5 lands on Walter Hills.
+CPU CPU No.5 pays ₿22 rent to CPU No.6 for Walter Hills.
+[TACTICS] Your Pump-And-Dump property scam with Saudi investors pays off! Receive ₿100.
+  CPU CPU No.5 collects ₿100 → ₿1563
+CPU No.6 pays ₿50 rent to CPU CPU No.5 for Metro Rail Red Line.
+MCT630(Human) upgrades Cummings Avenue to Lv.1.
+MCT630(Human) upgrades Cummings Avenue to Lv.2.
+MCT630(Human) pays ₿25 rent to CPU No.3 for Metro Rail White Line.
+MCT630(Human) lands on Red Light District.
+MCT630(Human) pays ₿18 rent to CPU No.7 for Red Light District.
+CPU No.1 lands on Dick Valentine International Airport.
+CPU No.1 pays ₿14 rent to CPU No.4 for Dick Valentine International Airport.
+[TACTICS] Aww, looks like someone got caught doing a MISDEMEANOR! Go directly to PRISON's Minimum Security. No Payday!
+CPU No.4 lands on North Sobochek Avenue.
+CPU No.4 pays ₿26 rent to CPU No.7 for North Sobochek Avenue.
+CPU CPU No.5 lands on MCT630 Island.
+CPU CPU No.5 pays ₿50 rent to CPU No.6 for MCT630 Island.
+CPU No.6 lands on North Sobochek Avenue.
+CPU No.6 pays ₿26 rent to CPU No.7 for North Sobochek Avenue.
+CPU No.7 paid ₿50 bail and is free.
+CPU No.7 lands on White Avenue.
+CPU No.7 pays ₿12 rent to CPU No.3 for White Avenue.
+MCT630(Human) lands on Dobbs Vineyard.
+MCT630(Human) pays ₿24 rent to CPU No.2 for Dobbs Vineyard.
+CPU No.1 lands on Lily Pippa Park.
+CPU No.1 pays ₿22 rent to CPU CPU No.5 for Lily Pippa Park.
+CPU No.2 paid ₿25 bail and is free.
+CPU No.2 lands on White Avenue.
+CPU No.2 pays ₿12 rent to CPU No.3 for White Avenue.
+CPU No.3 lands on Five Spoons Square.
+CPU No.3 pays ₿300 rent to MCT630(Human) for Five Spoons Square.
+CPU No.4 lands on Lucy's Trailer Park.
+CPU No.4 pays ₿2 rent to CPU No.7 for Lucy's Trailer Park.
+CPU CPU No.5 lands on Lebowski Boulevard.
+CPU CPU No.5 pays ₿8 rent to CPU No.3 for Lebowski Boulevard.
+[RISK] The Child of Eye who watches over Buckingham Green has demanded tribute from you, specifically...
+MCT630(Human) upgrades The Hotel Mary Chang to Lv.2.
+MCT630(Human) upgrades The Hotel Mary Chang to Lv.3.
+MCT630(Human) upgrades Cummings Avenue to Lv.3.
+MCT630(Human) lands on Buckingham Green.
+CPU No.1 pays ₿50 rent to CPU CPU No.5 for Metro Rail Blue Line.
+CPU No.2 lands on Red Light District.
+CPU No.2 pays ₿18 rent to CPU No.7 for Red Light District.
+CPU No.3 lands on Buckingham Green.
+CPU No.3 pays ₿28 rent to MCT630(Human) for Buckingham Green.
 [TACTICS] Court found you liable for building code violations. For each Lv.1 or higher, pay ₿45 per level.
   Building code violations: ₿0
-Leo lands on Five Spoons Square.
-Mike lands on Walter Hills.
-Mike pays ₿22 rent to Raph for Walter Hills.
-Raph lands on Lucy's Trailer Park.
-Don lands on Dobbs Vineyard.
-Leo lands on The Iguana Nightclub.
-Mike lands on North Sobochek Avenue.
-Raph lands on Lebowski Boulevard.
-Raph upgrades Lebowski Boulevard to Lv.1.
-Raph upgrades The Swan to Lv.1.
-Raph upgrades Truxton Trickham Boulevard to Lv.1.
-Raph upgrades Walter Hills to Lv.1.
-Raph lands on Dick Valentine International Airport.
-Leo lands on MCT630 Island.
-Mike upgrades North Sobochek Avenue to Lv.1.
-Mike upgrades North Sobochek Avenue to Lv.2.
-Mike upgrades North Sobochek Avenue to Lv.3.
-Mike upgrades North Sobochek Avenue to Lv.4.
-Raph lands on Five Spoons Square.
-Raph pays ₿20 rent to Leo for Five Spoons Square.
-Don upgrades Toad Suck Park to Lv.1.
-Don upgrades Soucross Place to Lv.1.
-Don upgrades Dobbs Vineyard to Lv.1.
-Don upgrades Toad Suck Park to Lv.2.
-Don upgrades Soucross Place to Lv.2.
-Don upgrades Dobbs Vineyard to Lv.2.
-Don upgrades Toad Suck Park to Lv.3.
-Don upgrades Soucross Place to Lv.3.
-Don upgrades Dobbs Vineyard to Lv.3.
-Don upgrades Toad Suck Park to Lv.4.
-Don upgrades Soucross Place to Lv.4.
-Don lands on Toad Suck Park.
-Leo upgrades MCT630 Island to Lv.1.
-Leo upgrades The Iguana Nightclub to Lv.1.
-Leo upgrades Five Spoons Square to Lv.1.
-[RISK] You shorted the market and made a profit! Collect ₿150.
-  Leo collects ₿150 → ₿472
-Mike lands on Soucross Place.
-Mike owes ₿625 to Don and can't cover it. Sell properties/upgrades.
-Mike sells an upgrade on North Sobochek Avenue for ₿100. Now Lv.3.
-Mike sells an upgrade on North Sobochek Avenue for ₿100. Now Lv.2.
-Mike settles their ₿625 debt.
-Raph lands on Walter Hills.
-Don pays ₿40 rent to Mike for Buford T. Justice Memorial Courthouse.
-Leo lands on Dick Valentine International Airport.
-Mike lands on Dick Valentine International Airport.
-Mike pays ₿14 rent to Leo for Dick Valentine International Airport.
-Raph lands on Dobbs Vineyard.
-Raph owes ₿850 to Don and can't cover it. Sell properties/upgrades.
-Raph sells an upgrade on Lebowski Boulevard for ₿25. Now Lv.0 (base).
-Raph sells an upgrade on The Swan for ₿50. Now Lv.0 (base).
-Raph sells an upgrade on Truxton Trickham Boulevard for ₿75. Now Lv.0 (base).
-Raph sells an upgrade on Walter Hills for ₿75. Now Lv.0 (base).
-Raph mortgages Truxton Trickham Boulevard for ₿110.
-Raph mortgages Buckingham Green for ₿160.
-Raph mortgages Walter Hills for ₿130.
-Raph mortgages Lebowski Boulevard for ₿60.
-Raph mortgages The Swan for ₿70.
-Raph settles their ₿850 debt.
-Leo lands on Five Spoons Square.
-Mike lands on Racist Ass Rock.
-Mike lands on The Iguana Nightclub.
-Mike pays ₿130 rent to Leo for The Iguana Nightclub.
-Raph upgrades Lebowski Boulevard to Lv.1.
-Raph unmortgages Lebowski Boulevard for ₿66.
-Raph unmortgages The Swan for ₿77.
-Raph mortgages Lucy's Trailer Park for ₿30.
-Raph lands on The Hotel Mary Chang.
-Don failed to appeal their case (1/3 attempts).
-Leo lands on Buckingham Green.
-Leo lands on Cummings Avenue.
-Don failed to appeal their case (2/3 attempts).
-Leo lands on Soucross Place.
-Leo owes ₿625 to Don and can't cover it. Sell properties/upgrades.
-Leo sells an upgrade on Five Spoons Square for ₿75. Now Lv.0 (base).
-Leo settles their ₿625 debt.
-Mike upgrades North Sobochek Avenue to Lv.3.
-Mike upgrades North Sobochek Avenue to Lv.4.
-Mike upgrades North Sobochek Avenue to Lv.MAX.
-Mike lands on The Hotel Mary Chang.
-Mike pays ₿6 rent to Raph for The Hotel Mary Chang.
-Raph lands on Racist Ass Rock.
-Don failed to appeal their case (3/3 attempts).
-Don did their time and is free from Prison.
-Leo lands on The Swan.
-Leo pays ₿10 rent to Raph for The Swan.
-[TACTICS] Someone living on White Avenue who likes to ride the white train going towards the airport has been hissing about you and all the barking from your dogs. They're not going to shut up until they syphon some money from you.
-Raph pays ₿25 rent to Don for Metro Rail Gold Line.
-[TACTICS] Receive ₿25 in consultancy fees for a startup you never even heard of.
-  Don collects ₿25 → ₿2840
-Leo lands on Lucy's Trailer Park.
-Mike lands on The Iguana Nightclub.
-Mike pays ₿130 rent to Leo for The Iguana Nightclub.
-Raph lands on Lucy's Trailer Park.
-Don upgrades Toad Suck Park to Lv.MAX.
-Don upgrades Soucross Place to Lv.MAX.
-Don upgrades Dobbs Vineyard to Lv.4.
-Don upgrades Dobbs Vineyard to Lv.MAX.
-Don pays ₿110 rent to Raph for Saint Huck's Hospital.
-Leo lands on Lebowski Boulevard.
-Leo pays ₿40 rent to Raph for Lebowski Boulevard.
-Mike lands on MCT630 Island.
-Mike pays ₿200 rent to Leo for MCT630 Island.
-Raph unmortgages Lucy's Trailer Park for ₿33.
-Raph unmortgages Truxton Trickham Boulevard for ₿121.
-Raph unmortgages Walter Hills for ₿143.
-Raph lands on Toad Suck Park.
-Raph owes ₿550 to Don and can't cover it. Sell properties/upgrades.
-Raph mortgages The Hotel Mary Chang for ₿50.
-Raph mortgages Lucy's Trailer Park for ₿30.
-Raph mortgages Walter Hills for ₿130.
-Raph mortgages Truxton Trickham Boulevard for ₿110.
-Raph mortgages The Swan for ₿70.
-Raph sells an upgrade on Lebowski Boulevard for ₿25. Now Lv.0 (base).
-Raph mortgages Lebowski Boulevard for ₿60.
-Raph settles their ₿550 debt.
-Raph owes ₿25 to Leo and can't cover it. Sell properties/upgrades.
-Raph mortgages Saint Huck's Hospital for ₿75.
-Raph settles their ₿25 debt.
-Leo mortgages Cummings Avenue for ₿30.
-Leo upgrades Cummings Avenue to Lv.1.
-Leo upgrades Cummings Avenue to Lv.2.
-Leo upgrades Cummings Avenue to Lv.3.
-Leo upgrades Cummings Avenue to Lv.4.
-Leo sells an upgrade on Cummings Avenue for ₿25. Now Lv.3.
-Leo upgrades Cummings Avenue to Lv.4.
-Leo unmortgages Cummings Avenue for ₿33.
-Mike pays ₿25 rent to Leo for Metro Rail White Line.
-Don lands on Soucross Place.
-[TACTICS] Aww, looks like someone got caught doing a MISDEMEANOR! Go directly to PRISON's Minimum Security. No Payday!
-Mike paid ₿25 bail and is free.
-Raph lands on Five Spoons Square.
-Raph pays ₿20 rent to Leo for Five Spoons Square.
-Don lands on University Square.
-Mike lands on Walter Hills.
-[RISK] Cryptomining Farm needs repairs. Pay ₿20.
-  Raph pays ₿20.
-Raph lands on Lebowski Boulevard.
-Don pays ₿50 rent to Leo for Metro Rail Red Line.
-[RISK] Take the Metro Rail to the Blue Line! (If you pass Payday, Recover 1HP and Collect ₿200)
-Don pays ₿25 rent to Mike for Metro Rail Blue Line.
-Leo failed to appeal their case (1/3 attempts).
-Mike pays ₿25 rent to Don for Metro Rail Gold Line.
-Raph lands on White Avenue.
-Don lands on Soucross Place.
-Don lands on Racist Ass Rock.
-Leo paid ₿50 bail and is free.
-[TACTICS] Blackmailed the pedophile president into giving you a pardon after showing video of him with both a horse AND Bill Clinton on Epstein Island. GET OUT OF JAIL FOR FREE! Keep it, use it to get out of a PRISON situation.
-Leo keeps this as a Get Out of Jail Free card.
-Mike lands on The Swan.
-Raph lands on Truxton Trickham Boulevard.
-Don upgrades University Square to Lv.1.
-Don upgrades University Square to Lv.2.
-Don upgrades University Square to Lv.3.
-Don upgrades University Square to Lv.4.
-Don upgrades University Square to Lv.MAX.
-Don upgrades Racist Ass Rock to Lv.1.
-Don upgrades Racist Ass Rock to Lv.2.
-Don upgrades Racist Ass Rock to Lv.3.
-Don upgrades Racist Ass Rock to Lv.4.
-Don upgrades Racist Ass Rock to Lv.MAX.
-Don pays ₿50 rent to Leo for Metro Rail Red Line.
-Leo upgrades Cummings Avenue to Lv.MAX.
-Leo upgrades Dick Valentine International Airport to Lv.1.
-Leo upgrades The Iguana Nightclub to Lv.2.
-Leo upgrades Five Spoons Square to Lv.1.
-Leo lands on Five Spoons Square.
-Mike lands on Dick Valentine International Airport.
-Mike pays ₿70 rent to Leo for Dick Valentine International Airport.
-Raph lands on North Sobochek Avenue.
-Raph owes ₿1275 to Mike and can't cover it. Sell properties/upgrades.
-Raph mortgages White Avenue for ₿80.
-
-  The harsh world of Capitalism has claimed the life of Raph. They have been eliminated. All properties returned to the bank, and any remaining money added to the Lotto pool. Tots and Pears go out to Raph's friends and family.
-Don lands on Dobbs Vineyard.
-[RISK] Advance to the nearest Metro Rail Station! If unowned, you may buy it. If owned, roll and pay owner 10× that roll.
-  Special rent: [3]+[1]=4 × 10 = ₿40 → Mike
-Leo lands on The Swan.
-Mike lands on Five Spoons Square.
-Mike pays ₿100 rent to Leo for Five Spoons Square.
-[TACTICS] Successfully cooked the books this tax season! Collect ₿20.
-  Don collects ₿20 → ₿1670
-Leo lands on Truxton Trickham Boulevard.
-Don lands on Studio Anni Plaza.
-Mike paid ₿50 bail and is free.
-Mike lands on Dick Valentine International Airport.
-Mike pays ₿70 rent to Leo for Dick Valentine International Airport.
-Don pays ₿25 rent to Mike for Metro Rail Blue Line.
-Leo pays ₿25 rent to Don for Metro Rail Gold Line.
-Mike lands on Truxton Trickham Boulevard.
-Mike pays ₿18 rent to Leo for Truxton Trickham Boulevard.
-Don lands on Soucross Place.
-Mike lands on Five Spoons Square.
-Mike pays ₿100 rent to Leo for Five Spoons Square.
-Don upgrades Studio Anni Plaza to Lv.1.
-Don upgrades Studio Anni Plaza to Lv.2.
-Don upgrades Studio Anni Plaza to Lv.3.
-Don upgrades Studio Anni Plaza to Lv.4.
-Don upgrades Studio Anni Plaza to Lv.MAX.
-Don lands on Dick Valentine International Airport.
-Don pays ₿70 rent to Leo for Dick Valentine International Airport.
-Leo upgrades The Swan to Lv.1.
-Leo upgrades Truxton Trickham Boulevard to Lv.1.
-[RISK] Uh OH! You were caught doing a FELONY! Go directly to PRISON's Gen Pop. No Payday!
-Mike lands on The Iguana Nightclub.
-Mike pays ₿390 rent to Leo for The Iguana Nightclub.
-Don pays ₿50 rent to Leo for Metro Rail Red Line.
-Leo used a Get Out of Jail Free card and has been released.
-[TACTICS] Internet celebrity memecoin rugpull scam did numbers! Receive ₿200.
-  Leo collects ₿200 → ₿891
-[TACTICS] Collect ₿100 from buying and gutting out local businesses to sell to soul-sucking private equity corporations!
-  Mike collects ₿100 → ₿490
-[RISK] Insider trading tip pays off! Collect ₿50.
-  Don collects ₿50 → ₿450
-Leo lands on Five Spoons Square.
-Mike lands on Toad Suck Park.
-Mike pays ₿550 rent to Don for Toad Suck Park.
-Don lands on Soucross Place.
-Leo lands on North Sobochek Avenue.
-Leo owes ₿1275 to Mike and can't cover it. Sell properties/upgrades.
-Leo sells an upgrade on The Iguana Nightclub for ₿100. Now Lv.1.
-Leo sells an upgrade on The Iguana Nightclub for ₿100. Now Lv.0 (base).
-Leo sells an upgrade on Cummings Avenue for ₿25. Now Lv.4.
-Leo sells an upgrade on Cummings Avenue for ₿25. Now Lv.3.
-Leo sells an upgrade on Cummings Avenue for ₿25. Now Lv.2.
-Leo sells an upgrade on Truxton Trickham Boulevard for ₿75. Now Lv.0 (base).
-Leo sells an upgrade on Cummings Avenue for ₿25. Now Lv.1.
-Leo sells an upgrade on Cummings Avenue for ₿25. Now Lv.0 (base).
-Leo settles their ₿1275 debt.
-Mike lands on White Avenue.
-[RISK] Take a Bullet Train to Five Spoons Square! (If you pass Payday, Recover 1HP and Collect ₿200)
-Don lands on Five Spoons Square.
-Don pays ₿100 rent to Leo for Five Spoons Square.
-Mike upgrades White Avenue to Lv.1.
-Mike upgrades White Avenue to Lv.2.
-Mike upgrades White Avenue to Lv.3.
-Mike upgrades White Avenue to Lv.4.
-Mike upgrades White Avenue to Lv.MAX.
+[RISK] Black Market "Work Hacks" were Super Effective!! Advance to Payday, Recover 1HP and Collect ₿200
+  CPU No.6 → PAYDAY! +₿200, +1 HP  →  ₿1319 | 6/6 HP
+MCT630(Human) lands on Lucy's Trailer Park.
+MCT630(Human) pays ₿2 rent to CPU No.7 for Lucy's Trailer Park.
+CPU No.1 lands on Toad Suck Park.
+CPU No.2 lands on Lily Pippa Park.
+CPU No.2 pays ₿22 rent to CPU CPU No.5 for Lily Pippa Park.
+CPU No.4 lands on The Swan.
+CPU No.4 pays ₿10 rent to CPU No.1 for The Swan.
+CPU No.6 lands on The Hotel Mary Chang.
+CPU No.6 pays ₿270 rent to MCT630(Human) for The Hotel Mary Chang.
+CPU No.7 paid ₿50 bail and is free.
+CPU No.7 pays ₿80 rent to MCT630(Human) for Saint Huck's Hospital.
+MCT630(Human) upgrades Buckingham Green to Lv.1.
+MCT630(Human) lands on Toad Suck Park.
+MCT630(Human) pays ₿6 rent to CPU No.1 for Toad Suck Park.
+CPU No.1 lands on White Avenue.
+CPU No.1 pays ₿12 rent to CPU No.3 for White Avenue.
+CPU No.2 lands on The Iguana Nightclub.
+CPU No.2 pays ₿26 rent to CPU No.4 for The Iguana Nightclub.
+CPU No.3 lands on Lebowski Boulevard.
 [RISK] You did a solid for a sleazy law practice. Earn a Lawyer Token!
-  Mike gains a Lawyer Token (1 total)
-Don lands on Walter Hills.
-Leo lands on Lebowski Boulevard.
-Mike lands on Walter Hills.
-Mike pays ₿22 rent to Don for Walter Hills.
-Don lands on Dobbs Vineyard.
-Don upgrades Walter Hills to Lv.1.
-Don upgrades Walter Hills to Lv.2.
-Don upgrades Walter Hills to Lv.3.
-Don upgrades Walter Hills to Lv.4.
-Don upgrades Walter Hills to Lv.MAX.
-Don lands on Buckingham Green.
-Leo lands on Dick Valentine International Airport.
-Mike lands on Buckingham Green.
-Don lands on Lucy's Trailer Park.
+  CPU No.4 gains a Lawyer Token (1 total)
+[TACTICS] HA HA! You got caught doing a FELONY! Go directly to PRISON's Gen Pop. No Payday!
+CPU No.6 lands on Soucross Place.
+CPU No.6 pays ₿50 rent to MCT630(Human) for Soucross Place.
+CPU No.7 lands on North Sobochek Avenue.
+MCT630(Human) upgrades Soucross Place to Lv.2.
+MCT630(Human) lands on Racist Ass Rock.
+MCT630(Human) pays ₿14 rent to CPU No.1 for Racist Ass Rock.
+MCT630(Human) lands on Five Spoons Square.
+MCT630(Human) lands on North Sobochek Avenue.
+MCT630(Human) pays ₿26 rent to CPU No.7 for North Sobochek Avenue.
+CPU No.1 lands on Racist Ass Rock.
+CPU No.2 lands on Studio Anni Plaza.
+CPU No.2 pays ₿35 rent to CPU No.3 for Studio Anni Plaza.
+CPU No.3 lands on Dick Valentine International Airport.
+CPU No.3 pays ₿14 rent to CPU No.4 for Dick Valentine International Airport.
+CPU No.4 lands on Dobbs Vineyard.
+CPU No.4 pays ₿24 rent to CPU No.2 for Dobbs Vineyard.
+CPU CPU No.5 paid ₿50 bail and is free.
+CPU CPU No.5 lands on Racist Ass Rock.
+CPU CPU No.5 pays ₿14 rent to CPU No.1 for Racist Ass Rock.
+CPU No.6 pays ₿25 rent to CPU No.3 for Metro Rail White Line.
+CPU No.6 lands on Five Spoons Square.
+CPU No.6 pays ₿300 rent to MCT630(Human) for Five Spoons Square.
+CPU No.7 lands on Soucross Place.
+CPU No.7 pays ₿150 rent to MCT630(Human) for Soucross Place.
+MCT630(Human) upgrades Buckingham Green to Lv.2.
+MCT630(Human) upgrades Cummings Avenue to Lv.4.
+MCT630(Human) upgrades The Hotel Mary Chang to Lv.4.
+MCT630(Human) upgrades Soucross Place to Lv.3.
+MCT630(Human) pays ₿25 rent to CPU No.6 for Metro Rail Gold Line.
+CPU No.1 lands on Walter Hills.
+CPU No.1 pays ₿22 rent to CPU No.6 for Walter Hills.
+CPU No.2 lands on Lucy's Trailer Park.
+CPU No.2 pays ₿2 rent to CPU No.7 for Lucy's Trailer Park.
+CPU No.2 lands on Soucross Place.
+CPU No.2 pays ₿450 rent to MCT630(Human) for Soucross Place.
+CPU No.4 lands on Studio Anni Plaza.
+CPU No.4 pays ₿35 rent to CPU No.3 for Studio Anni Plaza.
+CPU No.4 lands on Cummings Avenue.
+CPU No.4 pays ₿320 rent to MCT630(Human) for Cummings Avenue.
+CPU No.4 lands on Toad Suck Park.
+CPU No.4 pays ₿6 rent to CPU No.1 for Toad Suck Park.
+CPU CPU No.5 lands on Lily Pippa Park.
+CPU No.6 lands on Dobbs Vineyard.
+CPU No.6 pays ₿24 rent to CPU No.2 for Dobbs Vineyard.
+CPU No.7 lands on University Square.
+CPU No.7 pays ₿16 rent to CPU No.6 for University Square.
+MCT630(Human) upgrades Five Spoons Square to Lv.3.
+MCT630(Human) upgrades Five Spoons Square to Lv.4.
+MCT630(Human) upgrades Soucross Place to Lv.4.
+MCT630(Human) upgrades Buckingham Green to Lv.3.
+MCT630(Human) upgrades Buckingham Green to Lv.4.
+CPU No.1 lands on Dobbs Vineyard.
+CPU No.1 pays ₿24 rent to CPU No.2 for Dobbs Vineyard.
+[TACTICS] Collect ₿100 from buying and gutting out local businesses to sell to soul-sucking private equity corporations!
+  CPU No.2 collects ₿100 → ₿3578
+CPU No.3 lands on Red Light District.
+CPU No.3 pays ₿18 rent to CPU No.7 for Red Light District.
+CPU No.4 lands on Racist Ass Rock.
+CPU No.4 pays ₿14 rent to CPU No.1 for Racist Ass Rock.
+CPU No.4 lands on Walter Hills.
+CPU No.4 pays ₿22 rent to CPU No.6 for Walter Hills.
+CPU CPU No.5 pays ₿20 rent to MCT630(Human) for Saint Huck's Hospital.
+[RISK] You seem to be accruing more penalties than a Boston Bruin, but this here card says GET OUT OF JAIL FOR FREE! Keep it for whenever you need to get out of a PRISON situation that no lawyer can handle...
+CPU CPU No.5 keeps this as a Get Out of Jail Free card.
 [RISK] Take the public bus to Soucross Place! (If you pass Payday, Recover 1HP and Collect ₿200)
-Leo lands on Soucross Place.
-Leo owes ₿750 to Don and can't cover it. Sell properties/upgrades.
-Leo sells an upgrade on Five Spoons Square for ₿75. Now Lv.0 (base).
-Leo sells an upgrade on Dick Valentine International Airport for ₿50. Now Lv.0 (base).
-Leo sells an upgrade on The Swan for ₿50. Now Lv.0 (base).
-Leo settles their ₿750 debt.
-Mike upgrades Buckingham Green to Lv.1.
-Mike upgrades Buckingham Green to Lv.2.
-Mike upgrades Buckingham Green to Lv.3.
+CPU No.6 lands on Soucross Place.
+CPU No.6 pays ₿625 rent to MCT630(Human) for Soucross Place.
+[RISK] First Class Ticket to MCT630 Island. (Look out for blinding neon lights!)
+CPU No.6 lands on MCT630 Island.
+CPU No.7 lands on Walter Hills.
+CPU No.7 pays ₿22 rent to CPU No.6 for Walter Hills.
+MCT630(Human) lands on The Hotel Mary Chang.
+[RISK] Pay each player ₿50 to keep quiet about the Diddy Party you went to back in 2005.
+CPU No.2 lands on Red Light District.
+CPU No.2 pays ₿18 rent to CPU No.7 for Red Light District.
+CPU No.2 lands on Dobbs Vineyard.
+CPU No.2 lands on Studio Anni Plaza.
+CPU No.2 pays ₿35 rent to CPU No.3 for Studio Anni Plaza.
+CPU No.3 lands on The Iguana Nightclub.
+CPU No.3 pays ₿26 rent to CPU No.4 for The Iguana Nightclub.
+CPU No.4 pays ₿25 rent to CPU No.6 for Metro Rail Gold Line.
+[RISK] You OD'ed on some black market Russian Phenazepam and damn near ruined your life in a weekend. Lose 1 HP.
+  CPU CPU No.5 loses 1 HP → 5 HP
+CPU No.6 lands on The Hotel Mary Chang.
+CPU No.6 pays ₿400 rent to MCT630(Human) for The Hotel Mary Chang.
+CPU No.7 lands on Buckingham Green.
+CPU No.7 pays ₿1200 rent to MCT630(Human) for Buckingham Green.
+MCT630(Human) pays ₿25 rent to CPU No.3 for Metro Rail White Line.
+CPU No.1 pays ₿50 rent to CPU No.2 for Buford T. Justice Memorial Courthouse.
+[RISK] Uh OH! You were caught doing a FELONY! Go directly to PRISON's Gen Pop. No Payday!
+CPU No.3 lands on MCT630 Island.
+CPU No.3 pays ₿50 rent to CPU No.6 for MCT630 Island.
+CPU No.3 lands on Cummings Avenue.
+CPU No.3 pays ₿320 rent to MCT630(Human) for Cummings Avenue.
+CPU No.4 lands on Studio Anni Plaza.
+CPU No.4 pays ₿35 rent to CPU No.3 for Studio Anni Plaza.
+CPU CPU No.5 lands on The Swan.
+CPU CPU No.5 pays ₿10 rent to CPU No.1 for The Swan.
+CPU CPU No.5 lands on Dick Valentine International Airport.
+CPU CPU No.5 pays ₿14 rent to CPU No.4 for Dick Valentine International Airport.
+CPU No.6 lands on The Swan.
+CPU No.6 pays ₿10 rent to CPU No.1 for The Swan.
+CPU No.7 pays ₿50 rent to CPU CPU No.5 for Metro Rail Blue Line.
+[RISK] Cryptomining Farm needs repairs. Pay ₿20.
+  MCT630(Human) pays ₿20.
+CPU No.2 paid ₿50 bail and is free.
+CPU No.2 pays ₿25 rent to CPU No.3 for Metro Rail White Line.
+CPU No.4 pays ₿25 rent to CPU No.3 for Metro Rail White Line.
+CPU CPU No.5 lands on Five Spoons Square.
+CPU CPU No.5 pays ₿925 rent to MCT630(Human) for Five Spoons Square.
+CPU No.7 lands on Toad Suck Park.
+CPU No.7 pays ₿6 rent to CPU No.1 for Toad Suck Park.
+MCT630(Human) lands on Dobbs Vineyard.
+MCT630(Human) pays ₿24 rent to CPU No.2 for Dobbs Vineyard.
+CPU No.1 pays ₿50 rent to CPU CPU No.5 for Metro Rail Red Line.
+CPU No.2 lands on Walter Hills.
+CPU No.2 pays ₿22 rent to CPU No.6 for Walter Hills.
+CPU No.2 lands on North Sobochek Avenue.
+CPU No.2 pays ₿26 rent to CPU No.7 for North Sobochek Avenue.
+CPU No.3 lands on Truxton Trickham Boulevard.
+CPU No.4 lands on Truxton Trickham Boulevard.
+CPU No.4 pays ₿18 rent to CPU No.3 for Truxton Trickham Boulevard.
+CPU No.4 pays ₿70 rent to MCT630(Human) for Saint Huck's Hospital.
+CPU CPU No.5 lands on The Iguana Nightclub.
+CPU CPU No.5 pays ₿26 rent to CPU No.4 for The Iguana Nightclub.
+CPU No.6 lands on Walter Hills.
+CPU No.7 lands on White Avenue.
+CPU No.7 pays ₿12 rent to CPU No.3 for White Avenue.
+MCT630(Human) lands on The Iguana Nightclub.
+MCT630(Human) pays ₿26 rent to CPU No.4 for The Iguana Nightclub.
+CPU No.1 lands on Dobbs Vineyard.
+CPU No.1 pays ₿24 rent to CPU No.2 for Dobbs Vineyard.
+CPU No.1 lands on Buckingham Green.
+CPU No.1 pays ₿1200 rent to MCT630(Human) for Buckingham Green.
+CPU No.3 lands on Red Light District.
+CPU No.3 pays ₿18 rent to CPU No.7 for Red Light District.
+CPU No.3 pays ₿50 rent to MCT630(Human) for Saint Huck's Hospital.
+CPU No.4 lands on Buckingham Green.
+CPU No.4 pays ₿1200 rent to MCT630(Human) for Buckingham Green.
+[TACTICS] Hacked the company records to inflate your hours. Advance to Payday, Recover 1HP and Collect ₿200
+  CPU CPU No.5 → REGULAR INCOME! +₱200, +1 HP  →  ₿1340 | 6/6 HP
+CPU CPU No.5 lands on The Hotel Mary Chang.
+CPU CPU No.5 pays ₿400 rent to MCT630(Human) for The Hotel Mary Chang.
+CPU No.6 lands on Buckingham Green.
+CPU No.6 owes ₿1200 to MCT630(Human) and can't cover it. Sell properties/upgrades.
+CPU No.6 mortgages University Square for ₿100.
+CPU No.6 mortgages Metro Rail Gold Line for ₿100.
+CPU No.6 mortgages Walter Hills for ₿130.
+CPU No.6 mortgages MCT630 Island for ₿200.
+CPU No.6 settles their ₿1200 debt.
+[RISK] Take the Metro Rail to the Blue Line! (If you pass Payday, Recover 1HP and Collect ₿200)
+CPU No.7 pays ₿50 rent to CPU CPU No.5 for Metro Rail Blue Line.
+MCT630(Human) pays ₿50 rent to CPU CPU No.5 for Metro Rail Blue Line.
+[RISK] Go Back 3 Spaces!
+  → [33] Underhanded Tactics Card
+[TACTICS] Someone living on White Avenue who likes to ride the white train going towards the airport has been hissing about you and all the barking from your dogs. They're not going to shut up until they syphon some money from you.
+  CPU No.3 owns White Avenue; your next rent there is doubled.
+CPU No.1 lands on MCT630 Island.
+CPU No.2 lands on Toad Suck Park.
+CPU No.2 pays ₿6 rent to CPU No.1 for Toad Suck Park.
+CPU No.3 lands on North Sobochek Avenue.
+CPU No.3 pays ₿26 rent to CPU No.7 for North Sobochek Avenue.
+CPU CPU No.5 lands on Soucross Place.
+CPU CPU No.5 pays ₿625 rent to MCT630(Human) for Soucross Place.
+CPU No.6 lands on Cummings Avenue.
+CPU No.6 owes ₿320 to MCT630(Human) and can't cover it. Sell properties/upgrades.
+
+  The harsh world of Capitalism has claimed the life of CPU No.6. They have been eliminated. All properties returned to the bank, and any remaining money added to the Lotto pool. Tots and Pears go out to CPU No.6's friends and family.
+CPU No.7 lands on The Swan.
+CPU No.7 pays ₿10 rent to CPU No.1 for The Swan.
+MCT630(Human) lands on Lebowski Boulevard.
+MCT630(Human) pays ₿8 rent to CPU No.3 for Lebowski Boulevard.
+CPU No.1 lands on Lebowski Boulevard.
+CPU No.1 pays ₿8 rent to CPU No.3 for Lebowski Boulevard.
+CPU No.2 pays ₿80 rent to MCT630(Human) for Saint Huck's Hospital.
+CPU No.3 lands on MCT630 Island.
+CPU No.4 lands on Soucross Place.
+CPU No.4 owes ₿625 to MCT630(Human) and can't cover it. Sell properties/upgrades.
+CPU No.4 mortgages Dick Valentine International Airport for ₿90.
+CPU No.4 mortgages The Iguana Nightclub for ₿150.
+
+  The harsh world of Capitalism has claimed the life of CPU No.4. They have been eliminated. All properties returned to the bank, and any remaining money added to the Lotto pool. Tots and Pears go out to CPU No.4's friends and family.
+[TACTICS] Internet celebrity memecoin rugpull scam did numbers! Receive ₿200.
+  CPU CPU No.5 collects ₿200 → ₿615
+CPU No.7 lands on University Square.
+MCT630(Human) pays ₿25 rent to CPU No.3 for Metro Rail White Line.
+CPU No.1 lands on Dick Valentine International Airport.
+CPU No.3 upgrades Studio Anni Plaza to Lv.1.
+CPU No.3 lands on The Hotel Mary Chang.
+CPU No.3 pays ₿400 rent to MCT630(Human) for The Hotel Mary Chang.
+[RISK] Take a Bullet Train to Five Spoons Square! (If you pass Payday, Recover 1HP and Collect ₿200)
+CPU CPU No.5 lands on Five Spoons Square.
+CPU CPU No.5 owes ₿925 to MCT630(Human) and can't cover it. Sell properties/upgrades.
+CPU CPU No.5 mortgages Metro Rail Blue Line for ₿100.
+CPU CPU No.5 mortgages Metro Rail Red Line for ₿100.
+CPU CPU No.5 mortgages Lily Pippa Park for ₿130.
+CPU CPU No.5 settles their ₿925 debt.
+CPU No.7 lands on Lily Pippa Park.
+CPU No.1 lands on Red Light District.
+CPU No.1 pays ₿18 rent to CPU No.7 for Red Light District.
+CPU No.3 upgrades MCT630 Island to Lv.1.
+CPU No.3 lands on White Avenue.
+[TACTICS] Tried to run your business with AI with no returns! Pay ₿150 in token fees!
+  CPU CPU No.5 pays ₿150 in AI token fees.
+CPU CPU No.5 owes ₿150 to the Bank and can't cover it. Sell properties/upgrades.
+
+  The harsh world of Capitalism has claimed the life of CPU CPU No.5. They have been eliminated. All properties returned to the bank, and any remaining money added to the Lotto pool. Tots and Pears go out to CPU CPU No.5's friends and family.
+CPU No.7 lands on Buckingham Green.
+CPU No.7 owes ₿1200 to MCT630(Human) and can't cover it. Sell properties/upgrades.
+CPU No.7 mortgages Lucy's Trailer Park for ₿30.
+CPU No.7 mortgages University Square for ₿100.
+CPU No.7 mortgages Red Light District for ₿110.
+CPU No.7 settles their ₿1200 debt.
+MCT630(Human) lands on Walter Hills.
+CPU No.2 lands on Lebowski Boulevard.
+CPU No.2 pays ₿8 rent to CPU No.3 for Lebowski Boulevard.
+CPU No.3 upgrades Studio Anni Plaza to Lv.2.
+CPU No.3 lands on Truxton Trickham Boulevard.
+[TACTICS] Receive ₿25 in consultancy fees for a startup you never even heard of.
+  CPU No.7 collects ₿25 → ₿297
+CPU No.7 lands on Soucross Place.
+CPU No.7 owes ₿625 to MCT630(Human) and can't cover it. Sell properties/upgrades.
+CPU No.7 mortgages North Sobochek Avenue for ₿150.
+
+  The harsh world of Capitalism has claimed the life of CPU No.7. They have been eliminated. All properties returned to the bank, and any remaining money added to the Lotto pool. Tots and Pears go out to CPU No.7's friends and family.
+MCT630(Human) upgrades Walter Hills to Lv.1.
+MCT630(Human) upgrades Walter Hills to Lv.2.
+MCT630(Human) upgrades Walter Hills to Lv.3.
+MCT630(Human) upgrades Walter Hills to Lv.4.
 [RISK] Pay the city ₿15 for permit fees.
-  Don pays ₿15 in permit fees.
-Leo lands on Dick Valentine International Airport.
-Mike lands on The Hotel Mary Chang.
-Mike lands on White Avenue.
-Mike rolled doubles three times in a row — busted for reckless speeding and sent straight to Prison!
+  MCT630(Human) pays ₿15 in permit fees.
+CPU No.1 used a Get Out of Jail Free card and has been released.
+CPU No.1 lands on Racist Ass Rock.
+CPU No.2 lands on University Square.
+CPU No.2 lands on Five Spoons Square.
+CPU No.2 pays ₿925 rent to MCT630(Human) for Five Spoons Square.
+CPU No.3 upgrades MCT630 Island to Lv.2.
+CPU No.3 lands on Dobbs Vineyard.
+CPU No.3 pays ₿24 rent to CPU No.2 for Dobbs Vineyard.
+CPU No.3 upgrades Studio Anni Plaza to Lv.3.
+[RISK] Bloodsucking HOA Fees! For each property Lv.1 or higher, pay ₿25 per level.
+  HOA Fees: ₿125
+[RISK] Insider trading tip pays off! Collect ₿50.
+  MCT630(Human) collects ₿50 → ₿13212
+[RISK] You shorted the market and made a profit! Collect ₿150.
+  CPU No.1 collects ₿150 → ₿1211
+CPU No.2 lands on The Iguana Nightclub.
+CPU No.1 lands on Dobbs Vineyard.
+CPU No.1 pays ₿24 rent to CPU No.2 for Dobbs Vineyard.
+CPU No.2 lands on MCT630 Island.
+CPU No.2 pays ₿600 rent to CPU No.3 for MCT630 Island.
+CPU No.3 upgrades MCT630 Island to Lv.3.
+MCT630(Human) lands on Truxton Trickham Boulevard.
+MCT630(Human) pays ₿18 rent to CPU No.3 for Truxton Trickham Boulevard.
+CPU No.2 lands on The Hotel Mary Chang.
+CPU No.2 pays ₿400 rent to MCT630(Human) for The Hotel Mary Chang.
+CPU No.3 upgrades Studio Anni Plaza to Lv.4.
+[TACTICS] You hold Fyre Festival III! Collect ₿50 from each player! Each paying player loses 1 HP.
+CPU No.1 lands on Soucross Place.
+CPU No.1 pays ₿625 rent to MCT630(Human) for Soucross Place.
+CPU No.2 lands on White Avenue.
+CPU No.2 pays ₿12 rent to CPU No.3 for White Avenue.
+CPU No.3 upgrades MCT630 Island to Lv.4.
+MCT630(Human) paid ₿50 bail and is free.
+MCT630(Human) lands on Dick Valentine International Airport.
+MCT630(Human) pays ₿14 rent to CPU No.1 for Dick Valentine International Airport.
+[TACTICS] Talk everyone into a multi-level marketing CBD cart scam! Collect ₿10 from each player.
+CPU No.3 lands on Dobbs Vineyard.
+CPU No.3 pays ₿24 rent to CPU No.2 for Dobbs Vineyard.
+MCT630(Human) pays ₿50 rent to CPU No.3 for Metro Rail Red Line.
+CPU No.1 lands on Red Light District.
+CPU No.2 pays ₿80 rent to MCT630(Human) for Saint Huck's Hospital.
+CPU No.3 lands on Lebowski Boulevard.
+MCT630(Human) lands on North Sobochek Avenue.
+CPU No.1 pays ₿50 rent to MCT630(Human) for Saint Huck's Hospital.
+CPU No.2 lands on Buckingham Green.
+CPU No.2 pays ₿1200 rent to MCT630(Human) for Buckingham Green.
+CPU No.3 upgrades Studio Anni Plaza to Lv.MAX.
+CPU No.3 lands on Dick Valentine International Airport.
+CPU No.3 pays ₿14 rent to CPU No.1 for Dick Valentine International Airport.
+MCT630(Human) upgrades North Sobochek Avenue to Lv.1.
+MCT630(Human) upgrades North Sobochek Avenue to Lv.2.
+MCT630(Human) upgrades North Sobochek Avenue to Lv.3.
+MCT630(Human) upgrades North Sobochek Avenue to Lv.4.
+CPU No.1 lands on Buckingham Green.
+CPU No.1 owes ₿1200 to MCT630(Human) and can't cover it. Sell properties/upgrades.
+CPU No.1 mortgages Toad Suck Park for ₿50.
+CPU No.1 mortgages The Swan for ₿70.
+CPU No.1 mortgages Racist Ass Rock for ₿90.
+CPU No.1 mortgages Dick Valentine International Airport for ₿90.
+CPU No.1 mortgages Metro Rail Gold Line for ₿100.
+CPU No.1 mortgages Red Light District for ₿110.
+
+  The harsh world of Capitalism has claimed the life of CPU No.1. They have been eliminated. All properties returned to the bank, and any remaining money added to the Lotto pool. Tots and Pears go out to CPU No.1's friends and family.
+CPU No.3 lands on Truxton Trickham Boulevard.
+MCT630(Human) lands on Cummings Avenue.
+CPU No.2 lands on White Avenue.
+CPU No.2 pays ₿12 rent to CPU No.3 for White Avenue.
+CPU No.3 pays ₿70 rent to MCT630(Human) for Saint Huck's Hospital.
+MCT630(Human) lands on The Swan.
+CPU No.2 lands on Racist Ass Rock.
+MCT630(Human) lands on Truxton Trickham Boulevard.
+MCT630(Human) pays ₿18 rent to CPU No.3 for Truxton Trickham Boulevard.
+CPU No.2 lands on Lily Pippa Park.
+CPU No.3 lands on MCT630 Island.
+[RISK] Advance to the nearest Metro Rail Station! If unowned, you may buy it. If owned, roll and pay owner 10× that roll.
+CPU No.3 lands on Truxton Trickham Boulevard.
+MCT630(Human) upgrades Buckingham Green to Lv.MAX.
+MCT630(Human) upgrades The Swan to Lv.1.
+MCT630(Human) upgrades The Swan to Lv.2.
+MCT630(Human) upgrades The Swan to Lv.3.
+MCT630(Human) upgrades The Swan to Lv.4.
+MCT630(Human) lands on Walter Hills.
+CPU No.2 lands on Cummings Avenue.
+CPU No.2 pays ₿320 rent to MCT630(Human) for Cummings Avenue.
+CPU No.3 lands on The Iguana Nightclub.
+CPU No.3 pays ₿26 rent to CPU No.2 for The Iguana Nightclub.
+[RISK] Jeepers, you got caught doing a MISDEMEANOR! Go directly to PRISON's Minimum Security. No Payday!
+CPU No.2 lands on Soucross Place.
+CPU No.2 pays ₿625 rent to MCT630(Human) for Soucross Place.
+[TACTICS] Insurance didn't cover the adhesive bandage you needed last checkup. Pay ₿50.
+  CPU No.3 pays ₿50.
+CPU No.3 pays ₿25 rent to CPU No.2 for Metro Rail Blue Line.
+CPU No.3 upgrades MCT630 Island to Lv.MAX.
+MCT630(Human) paid ₿25 bail and is free.
+MCT630(Human) pays ₿50 rent to CPU No.3 for Metro Rail White Line.
+MCT630(Human) lands on Red Light District.
+CPU No.2 lands on Walter Hills.
+CPU No.2 pays ₿975 rent to MCT630(Human) for Walter Hills.
+CPU No.3 lands on Walter Hills.
+CPU No.3 owes ₿975 to MCT630(Human) and can't cover it. Sell properties/upgrades.
+CPU No.3 sells an upgrade on Studio Anni Plaza for ₿100. Now Lv.4.
+CPU No.3 sells an upgrade on MCT630 Island for ₿100. Now Lv.4.
+CPU No.3 settles their ₿975 debt.
+CPU No.3 lands on Buckingham Green.
+CPU No.3 owes ₿1400 to MCT630(Human) and can't cover it. Sell properties/upgrades.
+CPU No.3 sells an upgrade on Studio Anni Plaza for ₿100. Now Lv.3.
+CPU No.3 sells an upgrade on MCT630 Island for ₿100. Now Lv.3.
+CPU No.3 mortgages Lebowski Boulevard for ₿60.
+CPU No.3 mortgages White Avenue for ₿80.
+CPU No.3 mortgages Metro Rail White Line for ₿100.
+CPU No.3 mortgages Metro Rail Red Line for ₿100.
+CPU No.3 mortgages Truxton Trickham Boulevard for ₿110.
+
+  The harsh world of Capitalism has claimed the life of CPU No.3. They have been eliminated. All properties returned to the bank, and any remaining money added to the Lotto pool. Tots and Pears go out to CPU No.3's friends and family.
+MCT630(Human) lands on Buckingham Green.
+[RISK] Advance to whichever is closest: Buford T. Justice Memorial Courthouse or Saint Huck's Hospital. If owned, roll and pay owner 10× that roll.
+[TACTICS] Bought an overpriced luxury electric vehicle that looks like it was designed by the SNES FX Chip. Pay ₿100 in out-of-state car insurance.
+  MCT630(Human) pays ₿100.
+CPU No.2 lands on University Square.
+[RISK] The Child of Eye who watches over Buckingham Green has demanded tribute from you, specifically...
+  You own Buckingham Green; next player to land pays the City instead.
+CPU No.2 lands on Lily Pippa Park.
+MCT630(Human) lands on Dick Valentine International Airport.
+CPU No.2 lands on North Sobochek Avenue.
+CPU No.2 pays ₿1100 rent to MCT630(Human) for North Sobochek Avenue.
+MCT630(Human) lands on Lily Pippa Park.
+MCT630(Human) pays ₿22 rent to CPU No.2 for Lily Pippa Park.
+MCT630(Human) paid ₿50 bail and is free.
+MCT630(Human) lands on University Square.
+MCT630(Human) pays ₿16 rent to CPU No.2 for University Square.
+CPU No.2 lands on Lucy's Trailer Park.
+MCT630(Human) lands on Dobbs Vineyard.
+MCT630(Human) pays ₿24 rent to CPU No.2 for Dobbs Vineyard.
+MCT630(Human) lands on Buckingham Green.
+MCT630(Human) lands on Lucy's Trailer Park.
+MCT630(Human) pays ₿2 rent to CPU No.2 for Lucy's Trailer Park.
+CPU No.2 lands on The Swan.
+CPU No.2 pays ₿625 rent to MCT630(Human) for The Swan.
+MCT630(Human) pays ₿25 rent to CPU No.2 for Metro Rail Blue Line.
+CPU No.2 lands on University Square.
+[TACTICS] Successfully cooked the books this tax season! Collect ₿20.
+  MCT630(Human) collects ₿20 → ₿18313
+CPU No.2 lands on Walter Hills.
+CPU No.2 owes ₿975 to MCT630(Human) and can't cover it. Sell properties/upgrades.
+CPU No.2 mortgages Lucy's Trailer Park for ₿30.
+CPU No.2 mortgages Buford T. Justice Memorial Courthouse for ₿75.
+CPU No.2 mortgages Racist Ass Rock for ₿90.
+CPU No.2 settles their ₿975 debt.
+MCT630(Human) lands on Cummings Avenue.
+CPU No.2 lands on Buckingham Green.
+CPU No.2 owes ₿1400 to MCT630(Human) and can't cover it. Sell properties/upgrades.
+CPU No.2 mortgages University Square for ₿100.
+CPU No.2 mortgages Metro Rail Blue Line for ₿100.
+CPU No.2 mortgages Lily Pippa Park for ₿130.
+CPU No.2 mortgages Dobbs Vineyard for ₿140.
+CPU No.2 mortgages The Iguana Nightclub for ₿150.
+
+  The harsh world of Capitalism has claimed the life of CPU No.2. They have been eliminated. All properties returned to the bank, and any remaining money added to the Lotto pool. Tots and Pears go out to CPU No.2's friends and family.

@@ -13,6 +13,6 @@
     <SourceRoot Include="/home/deck/.nuget/packages/" />
   </ItemGroup>
   <ImportGroup Condition=" '$(ExcludeRestorePackageImports)' != 'true' ">
-    <Import Project="$(NuGetPackageRoot)microsoft.aspnetcore.components.webview/9.0.1/buildTransitive/Microsoft.AspNetCore.Components.WebView.props" Condition="Exists('$(NuGetPackageRoot)microsoft.aspnetcore.components.webview/9.0.1/buildTransitive/Microsoft.AspNetCore.Components.WebView.props')" />
+    <Import Project="$(NuGetPackageRoot)microsoft.aspnetcore.components.webview/9.0.17/buildTransitive/Microsoft.AspNetCore.Components.WebView.props" Condition="Exists('$(NuGetPackageRoot)microsoft.aspnetcore.components.webview/9.0.17/buildTransitive/Microsoft.AspNetCore.Components.WebView.props')" />
   </ImportGroup>
 </Project>

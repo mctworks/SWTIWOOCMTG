@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk.Razor">
+﻿<Project Sdk="Microsoft.NET.Sdk.Razor">
 
   <PropertyGroup>
     <OutputType>Exe</OutputType>
@@ -13,6 +13,7 @@
 
   <ItemGroup>
     <PackageReference Include="Photino.Blazor" Version="4.0.13" />
+    <PackageReference Include="Microsoft.AspNetCore.Components.WebView" Version="9.0.17" />
   </ItemGroup>
 
   <ItemGroup>

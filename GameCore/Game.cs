@@ -81,6 +81,7 @@ public class BoardSpace
 
 public class Player
 {
+    public IPlayerAI? Ai { get; set; }   // null = human-controlled
     public string Name { get; set; }
     public int Money { get; set; }
     public int Position { get; set; }
@@ -204,7 +205,17 @@ public class Game
     public BoardSpace? PendingSpecialPurchase { get; private set; }
     public int PendingSpecialPrice { get; private set; }
     public bool IsGameOver => Players.Count > 1 && Players.Count(p => !p.IsEliminated) <= 1;
-    public Player? Winner => Players.FirstOrDefault(p => !p.IsEliminated);
+    public Player? Winner => Players.FirstOrDefault(p => !p.IsEliminated);    
+    public bool ResolvePendingSpecialPurchaseForAi(Player player)
+{
+    if (PendingSpecialPurchase is null || player.Ai is null)
+        return false;
+
+    bool wantsToBuy = player.Ai.WantsToBuySpecialPurchase(player, PendingSpecialPurchase, PendingSpecialPrice, this);
+    return ResolveSpecialPurchase(player, wantsToBuy);
+}
+
+public void RunAiJailDecision(Player player) => player.Ai?.HandleJailTurn(player, this);
 
     private readonly Random _rng = new();
 
@@ -578,22 +589,40 @@ public RollOutcome RegisterRoll(int d1, int d2)
     }
 
     public bool TryDowngradeProperty(Player player, BoardSpace space, out string error)
-{
-    if (space.Owner != player) { error = "You don't own this property."; return false; }
-    if (space.Level <= 0) { error = "No upgrades to sell."; return false; }
+    {
+        if (space.Owner != player) { error = "You don't own this property."; return false; }
+        if (space.Level <= 0) { error = "No upgrades to sell."; return false; }
 
-    bool wasMax = space.Level == 5;
-    int refund = space.UpgradeCost / 2;
-    space.Level--;
-    player.CollectMoney(refund);
+        bool wasMax = space.Level == 5;
 
-    if (wasMax) { MaxesAvailable++; LevelsAvailable -= 4; }
-    else LevelsAvailable++;
+        // Selling a MAX (hotel) back to Lv.4 requires 4 standard-level houses to be
+        // available in the shared supply for the trade-back. If the bank's out, there's
+        // no way to "step down" one level — the whole upgrade liquidates straight to
+        // the base lot instead, same as real Monopoly's house-shortage rule.
+        if (wasMax && LevelsAvailable < 4)
+        {
+            int fullRefund = space.UpgradeCost / 2;
+            space.Level = 0;
+            player.CollectMoney(fullRefund);
+            MaxesAvailable++;
+            // LevelsAvailable untouched — no houses ever changed hands here.
 
-    Log.Add($"{player.Name} sells an upgrade on {space.Name} for ₿{refund}. Now Lv.{(space.Level == 0 ? "0 (base)" : space.Level.ToString())}.");
-    error = "";
-    return true;
-}
+            Log.Add($"{player.Name} sells the hotel on {space.Name} for ₿{fullRefund}, but the standard-house supply is empty — it can't be broken back into houses, so the property drops straight to Lv.0 (base).");
+            error = "";
+            return true;
+        }
+
+        int refund = space.UpgradeCost / 2;
+        space.Level--;
+        player.CollectMoney(refund);
+
+        if (wasMax) { MaxesAvailable++; LevelsAvailable -= 4; }
+        else LevelsAvailable++;
+
+        Log.Add($"{player.Name} sells an upgrade on {space.Name} for ₿{refund}. Now Lv.{(space.Level == 0 ? "0 (base)" : space.Level.ToString())}.");
+        error = "";
+        return true;
+    }
 
     public bool TryMortgageProperty(Player player, BoardSpace space, out string error)
     {

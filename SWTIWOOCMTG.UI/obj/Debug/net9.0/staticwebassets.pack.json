@@ -97,6 +97,10 @@
       "PackagePath": "staticwebassets/images/whitedice_6.svg"
     },
     {
+      "Id": "/home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.UI/wwwroot/index.html",
+      "PackagePath": "staticwebassets/index.html"
+    },
+    {
       "Id": "obj/Debug/net9.0/staticwebassets/msbuild.SWTIWOOCMTG.UI.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
       "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
     },

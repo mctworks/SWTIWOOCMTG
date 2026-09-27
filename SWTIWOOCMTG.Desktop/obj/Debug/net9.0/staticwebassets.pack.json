@@ -1,6 +1,10 @@
 {
   "Files": [
     {
+      "Id": "/home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.Desktop/wwwroot/css/app.css",
+      "PackagePath": "staticwebassets/css/app.css"
+    },
+    {
       "Id": "/home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.Desktop/wwwroot/index.html",
       "PackagePath": "staticwebassets/index.html"
     },

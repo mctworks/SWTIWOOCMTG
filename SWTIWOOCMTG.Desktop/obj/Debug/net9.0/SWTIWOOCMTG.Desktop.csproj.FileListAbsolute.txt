@@ -1,4 +1,6 @@
+/home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.Desktop/bin/Debug/net9.0/wwwroot/css/app.css
 /home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.Desktop/bin/Debug/net9.0/wwwroot/index.html
+/home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.Desktop/bin/Debug/net9.0/wwwroot/css/app.css.gz
 /home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.Desktop/bin/Debug/net9.0/wwwroot/index.html.gz
 /home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.Desktop/bin/Debug/net9.0/SWTIWOOCMTG.UI.staticwebassets.runtime.json
 /home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.Desktop/bin/Debug/net9.0/SWTIWOOCMTG.UI.staticwebassets.endpoints.json
@@ -61,6 +63,8 @@
 /home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.Desktop/obj/Debug/net9.0/rjsmrazor.dswa.cache.json
 /home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.Desktop/obj/Debug/net9.0/rjsmcshtml.dswa.cache.json
 /home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.Desktop/obj/Debug/net9.0/scopedcss/bundle/SWTIWOOCMTG.Desktop.styles.css
+/home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.Desktop/obj/Debug/net9.0/compressed/40uaivvich-{0}-a7zc73chac-a7zc73chac.gz
+/home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.Desktop/obj/Debug/net9.0/compressed/fqntgy982t-{0}-5mwyjzrdwr-5mwyjzrdwr.gz
 /home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.Desktop/obj/Debug/net9.0/staticwebassets.build.json
 /home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.Desktop/obj/Debug/net9.0/staticwebassets.build.json.cache
 /home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.Desktop/obj/Debug/net9.0/staticwebassets.development.json
@@ -78,4 +82,3 @@
 /home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.Desktop/obj/Debug/net9.0/SWTIWOOCMTG.Desktop.pdb
 /home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.Desktop/obj/Debug/net9.0/SWTIWOOCMTG.Desktop.genruntimeconfig.cache
 /home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.Desktop/obj/Debug/net9.0/ref/SWTIWOOCMTG.Desktop.dll
-/home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.Desktop/obj/Debug/net9.0/compressed/fqntgy982t-{0}-5ipweew5fc-5ipweew5fc.gz
