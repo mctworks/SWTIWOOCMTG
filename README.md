@@ -41,7 +41,7 @@ Attribution required: do whatever you want with this (use it, modify it, build o
 
 ## Roadmap / To-Do
 
-1. Debug game logic & finalize rules/settings: Ongoing, but at a good place! Now backed by an xUnit test suite and a seeded RNG for reproducible runs. :yellow_circle:
+1. Debug game logic, plus tweak and finalize rules/settings: Ongoing, but at a good place! Now backed by an xUnit test suite and a seeded RNG for reproducible runs. :yellow_circle:
 2. Split UI into a shared Razor Class Library: Complete :white_check_mark:
 3. Add an ASP.NET Core (Kestrel) host project referencing `GameCore` directly, to become the server. No managed cloud service, runs anywhere Kestrel runs. Turn logic is now fully extracted into a UI-independent `GameSession`, which is the main prep work this depended on. Host project itself not yet started. :red_circle:
 4. Self-hosted SignalR Hub on that host for real-time push actions (rolls, moves, rent, cards, debt/bankruptcy, turn changes) :red_circle:
