@@ -148,30 +148,43 @@ public class Card
 public class Deck
 {
     private readonly List<Card> _cards;
+    private readonly HashSet<Card> _members;
     private int _index;
 
     public Deck(IEnumerable<Card> cards, Random rng)
     {
         _cards = cards.ToList();
+        _members = new HashSet<Card>(_cards);
         Shuffle(rng);
     }
+
+    public int Count => _cards.Count;
 
     public Card Draw()
     {
         if (_cards.Count == 0)
             throw new InvalidOperationException("Deck is empty.");
 
-        var card = _cards[_index];
-        _index = (_index + 1) % _cards.Count;
+        int i = _index;
+        var card = _cards[i];
+
+        if (card.IsGoojf)
+        {
+            // Held by a player until ReturnCard — out of circulation.
+            _cards.RemoveAt(i);
+            _index = _cards.Count == 0 ? 0 : i % _cards.Count;
+        }
+        else
+        {
+            _index = (i + 1) % _cards.Count;
+        }
         return card;
     }
 
     public void ReturnCard(Card card)
     {
-        if (!_cards.Contains(card))
-        {
+        if (_members.Contains(card) && !_cards.Contains(card))
             _cards.Add(card);
-        }
     }
 
     private void Shuffle(Random rng)
@@ -183,7 +196,6 @@ public class Deck
         }
     }
 }
-
 
 public class Game
 {   
@@ -217,10 +229,13 @@ public class Game
 
 public void RunAiJailDecision(Player player) => player.Ai?.HandleJailTurn(player, this);
 
-    private readonly Random _rng = new();
+    private readonly Random _rng;
 
-    public Game()
+    public Game() : this(new Random()) { }
+
+    public Game(Random rng)
     {
+        _rng = rng;
         InitializeBoard();
         InitializeDecks();
     }
@@ -259,9 +274,9 @@ public void RunAiJailDecision(Player player) => player.Ai?.HandleJailTurn(player
 
     public bool TrySetPlayerCount(int humanCount, out string error)
     {
-        if (humanCount < 1 || humanCount > 8)
+        if (humanCount < 2 || humanCount > 8)
         {
-            error = "Number of players must be between 12and 8.";
+            error = "Number of players must be between 2 and 8.";
             return false;
         }
 
@@ -284,15 +299,14 @@ public void RunAiJailDecision(Player player) => player.Ai?.HandleJailTurn(player
 
     public void MovePlayer(Player player, int steps)
     {
-        int oldPos = player.Position;
-        int newPos = (oldPos + steps) % Board.Length;
+        int raw = player.Position + steps;
+        int newPos = raw % Board.Length;
 
-        if (newPos < oldPos || (oldPos == 0 && steps > 0 && newPos == 0))
+        if (steps > 0 && raw >= Board.Length && newPos != 0)
         {
             player.CollectMoney(200);
             player.GainHP();
         }
-
         player.Position = newPos;
     }
 
@@ -438,59 +452,62 @@ public RollOutcome RegisterRoll(int d1, int d2)
     }
 
     public bool TryUpgradeProperty(Player player, BoardSpace space, out string error)
-{
-    if (space.Type != SpaceType.Property)
     {
-        error = "Only properties can be upgraded; not rails or utilities.";
+        if (space.Type != SpaceType.Property)
+        {
+            error = "Only properties can be upgraded; not rails or utilities.";
+            return false;
+        }
+
+        if (space.Owner != player)
+        {
+            error = "You don't own this property.";
+            return false;
+        }
+
+        if (space.Level >= 5)
+        {
+            error = "Already at MAX level.";
+            return false;
+        }
+
+        if (Rules.PropertyColorGroups && !CheckColorGroupBuild(player, space, out error))
         return false;
-    }
 
-    if (space.Owner != player)
-    {
-        error = "You don't own this property.";
-        return false;
-    }
+        bool isMaxUpgrade = space.Level == 4; // Lv.4 -> MAX
 
-    if (space.Level >= 5)
-    {
-        error = "Already at MAX level.";
-        return false;
-    }
+        if (isMaxUpgrade && MaxesAvailable <= 0)
+        {
+            error = "Properties are unable to be maximized due to supply shortages. Either sell some property upgrades, or wait for another player to downgrade/sell their properties.";
+            return false;
+        }
+        if (!isMaxUpgrade && LevelsAvailable <= 0)
+        {
+            error = "Properties are unable to be upgraded due to supply shortages. Either downgrade some MAX properties, or wait for another player to downgrade/sell their properties.";
+            return false;
+        }
 
-    bool isMaxUpgrade = space.Level == 4; // Lv.4 -> MAX
+        if (!player.PayMoney(space.UpgradeCost, out _))
+        {
+            error = "Not enough money to upgrade.";
+            return false;
+        }
 
-    if (isMaxUpgrade && MaxesAvailable <= 0)
-    {
-        error = "Properties are unable to be maximized due to supply shortages. Either sell some property upgrades, or wait for another player to downgrade/sell their properties.";
-        return false;
-    }
-    if (!isMaxUpgrade && LevelsAvailable <= 0)
-    {
-        error = "Properties are unable to be upgraded due to supply shortages. Either downgrade some MAX properties, or wait for another player to downgrade/sell their properties.";
-        return false;
-    }
+        if (isMaxUpgrade)
+        {
+            MaxesAvailable--;
+            LevelsAvailable += 4; // 4 levels return to the bank
+        }
+        else
+        {
+            LevelsAvailable--;
+        }
 
-    if (!player.PayMoney(space.UpgradeCost, out _))
-    {
-        error = "Not enough money to upgrade.";
-        return false;
+        space.Level++;
+        Log.Add($"{player.Name} upgrades {space.Name} to Lv.{(space.Level == 5 ? "MAX" : space.Level.ToString())}.");
+        error = "";
+        return true;
     }
-
-    if (isMaxUpgrade)
-    {
-        MaxesAvailable--;
-        LevelsAvailable += 4; // 4 levels return to the bank
-    }
-    else
-    {
-        LevelsAvailable--;
-    }
-
-    space.Level++;
-    Log.Add($"{player.Name} upgrades {space.Name} to Lv.{(space.Level == 5 ? "MAX" : space.Level.ToString())}.");
-    error = "";
-    return true;
-}
 
     public bool TryPay(Player payer, int amount, Player? creditor)
 {
@@ -557,35 +574,31 @@ public RollOutcome RegisterRoll(int d1, int d2)
         return false;
     }
 
-    public void TryGoojfCard(Player player, out string error)
+    public bool TryGoojfCard(Player player, out string error)
     {
-        var goojfCard = player.GoojfCards.FirstOrDefault();
-        if (goojfCard == null)
-        {
-            error = "No Get Out of Jail Free card available.";
-            return;
-        }
+        var card = player.GoojfCards.FirstOrDefault();
+        if (card == null) { error = "No Get Out of Jail Free card available."; return false; }
 
-        player.GoojfCards.Remove(goojfCard);
+        player.GoojfCards.Remove(card);
+        RiskDeck.ReturnCard(card);      // no-op for the deck that doesn't own it
+        TacticsDeck.ReturnCard(card);
         player.Prison = PrisonStatus.Free;
         player.TurnsInPrison = 0;
         Log.Add($"{player.Name} used a Get Out of Jail Free card and has been released.");
         error = "";
+        return true;
     }
 
-    public void TryLawyerToken(Player player, out string error)
+    public bool TryLawyerToken(Player player, out string error)
     {
-        if (player.LawyerTokens <= 0)
-        {
-            error = "No Lawyer Tokens available.";
-            return;
-        }
+        if (player.LawyerTokens <= 0) { error = "No Lawyer Tokens available."; return false; }
 
         player.LawyerTokens--;
         player.Prison = PrisonStatus.MinimumSecurity;
         player.TurnsInPrison = 0;
         Log.Add($"{player.Name} used a Lawyer Token and has been moved to Minimum Security.");
         error = "";
+        return true;
     }
 
     public bool TryDowngradeProperty(Player player, BoardSpace space, out string error)
@@ -594,6 +607,9 @@ public RollOutcome RegisterRoll(int d1, int d2)
         if (space.Level <= 0) { error = "No upgrades to sell."; return false; }
 
         bool wasMax = space.Level == 5;
+
+        if (Rules.PropertyColorGroups && GroupMates(space).Any(s => s.Level > space.Level))
+            { error = "Property Color Groups is on: sell from the highest-level property in this color group first."; return false; }
 
         // Selling a MAX (hotel) back to Lv.4 requires 4 standard-level houses to be
         // available in the shared supply for the trade-back. If the bank's out, there's
@@ -627,6 +643,8 @@ public RollOutcome RegisterRoll(int d1, int d2)
     public bool TryMortgageProperty(Player player, BoardSpace space, out string error)
     {
         if (space.Owner != player) { error = "You don't own this property."; return false; }
+        if (Rules.PropertyColorGroups && GroupMates(space).Any(s => s.Level > 0))
+        { error = "Property Color Groups is on: sell all upgrades in this color group first."; return false; }
         if (space.Level > 0) { error = "Sell all upgrades on this property first."; return false; }
         if (space.IsMortgaged) { error = "Already mortgaged."; return false; }
 
@@ -636,7 +654,6 @@ public RollOutcome RegisterRoll(int d1, int d2)
         error = "";
         return true;
     }
-
     public bool TryUnmortgageProperty(Player player, BoardSpace space, out string error)
     {
         if (space.Owner != player) { error = "You don't own this property."; return false; }
@@ -650,50 +667,29 @@ public RollOutcome RegisterRoll(int d1, int d2)
     }
 
     public bool TryResolveDebt(out string error)
-{
-    var debt = CurrentDebt;
-    if (debt == null) { error = "No outstanding debt."; return false; }
-
-    if (debt.Debtor.Money < debt.Amount)
     {
-        error = $"{debt.Debtor.Name} is still short ₿{debt.Amount - debt.Debtor.Money}.";
-        return false;
-    }
+        var debt = CurrentDebt;
+        if (debt == null) { error = "No outstanding debt."; return false; }
 
-    debt.Debtor.Money -= debt.Amount;
-    if (debt.Creditor != null) debt.Creditor.CollectMoney(debt.Amount);
-    else AddToJackpot(debt.Amount);
-
-    Log.Add($"{debt.Debtor.Name} settles their ₿{debt.Amount} debt.");
-    PendingDebts.Dequeue();
-    error = "";
-    return true;
-}
-
-    public void DeclareBankruptcy(Player player)
-    {
-        Eliminate(player);
-        foreach (var prop in player.Properties.ToList())
+        if (debt.Debtor.Money < debt.Amount)
         {
-            prop.Owner = null;
-            prop.Level = 0;
-            prop.IsMortgaged = false;
+            error = $"{debt.Debtor.Name} is still short ₿{debt.Amount - debt.Debtor.Money}.";
+            return false;
         }
-        player.Properties.Clear();
 
-        /* if (PlayerInDebt == player)
-        {
-            PlayerInDebt = null;
-            DebtAmount = 0;
-            DebtCreditor = null;
-        } */
+        debt.Debtor.Money -= debt.Amount;
+        if (debt.Creditor != null) debt.Creditor.CollectMoney(debt.Amount);
+        else AddToJackpot(debt.Amount);
 
-        if (CurrentDebt?.Debtor == player)
+        Log.Add($"{debt.Debtor.Name} settles their ₿{debt.Amount} debt.");
         PendingDebts.Dequeue();
+        error = "";
+        return true;
     }
 
     public void AddToJackpot(int amount)
     {
+        if (!Rules.Jackpot) return;
         Jackpot += amount;
     }
 
@@ -706,7 +702,7 @@ public RollOutcome RegisterRoll(int d1, int d2)
                 other.LoseHP();
                 if (other.HP <= 0)
                 {
-                    other.IsEliminated = true;
+                    Eliminate(other);
                 }
             }
         }
@@ -725,6 +721,8 @@ public RollOutcome RegisterRoll(int d1, int d2)
 
     public void SendToPrison(Player player, PrisonStatus level, bool noPayday = true)
     {
+        if (level == PrisonStatus.GenPop && !Rules.PrisonGenPop)
+            level = PrisonStatus.MinimumSecurity;
         player.Prison = level;
         player.TurnsInPrison = 0;
         player.Position = 10;
@@ -1294,11 +1292,11 @@ public RollOutcome RegisterRoll(int d1, int d2)
 
     // ── Utility ────────────────────────────────────────────────────────────────
     
-    private static bool YesNo()
+ /*    private static bool YesNo()
     {
         string? input = Console.ReadLine()?.Trim().ToLower();
         return input == "y" || input == "yes";
-    }
+    } */
 
     // ── Dice ───────────────────────────────────────────────────────────────────
 
@@ -1335,10 +1333,64 @@ public RollOutcome RegisterRoll(int d1, int d2)
     {
         if (player.IsEliminated) return;
         player.IsEliminated = true;
+
         if (player.Money > 0) { AddToJackpot(player.Money); player.Money = 0; }
+
+        foreach (var prop in player.Properties.ToList())
+        {
+            // Level 5 holds a MAX token; levels 1–4 hold that many standard levels.
+            if (prop.Level >= 5) MaxesAvailable++;
+            else LevelsAvailable += prop.Level;
+
+            prop.Owner = null;
+            prop.Level = 0;
+            prop.IsMortgaged = false;
+            prop.CityCollectsNextRent = false;
+        }
+        player.Properties.Clear();
+
+        foreach (var card in player.GoojfCards)
+        {
+            RiskDeck.ReturnCard(card);
+            TacticsDeck.ReturnCard(card);
+        }
+        player.GoojfCards.Clear();
+        player.DoubledRentPositions.Clear();
+
+        // Drop their debts; debts owed *to* them go to the bank instead.
+        var remaining = PendingDebts
+            .Where(d => d.Debtor != player)
+            .Select(d => d.Creditor == player
+                ? new DebtEntry { Debtor = d.Debtor, Amount = d.Amount, Creditor = null }
+                : d)
+            .ToList();
+        PendingDebts.Clear();
+        foreach (var d in remaining) PendingDebts.Enqueue(d);
+
         Log.Add($"\n  The harsh world of Capitalism has claimed the life of {player.Name}. They have been eliminated. All properties returned to the bank, and any remaining money added to the Lotto pool. Tots and Pears go out to {player.Name}'s friends and family.");
     }
 
+    public void DeclareBankruptcy(Player player) => Eliminate(player);
+
+    private IEnumerable<BoardSpace> GroupMates(BoardSpace space) =>
+    Board.Where(s => s.Type == SpaceType.Property && s.Group == space.Group);
+
+    private bool CheckColorGroupBuild(Player player, BoardSpace space, out string error)
+    {
+        var group = GroupMates(space).ToList();
+
+        if (group.Any(s => s.Owner != player))
+        { error = "Property Color Groups is on: you need every property in this color group before upgrading."; return false; }
+
+        if (group.Any(s => s.IsMortgaged))
+        { error = "Property Color Groups is on: a property in this color group is mortgaged."; return false; }
+
+        if (group.Any(s => s.Level < space.Level))
+        { error = "Property Color Groups is on: upgrade the lowest-level property in this color group first."; return false; }
+
+        error = "";
+        return true;
+    }
 
     private void HandlePropertyLanding(Player player, BoardSpace space)
     {
@@ -1349,10 +1401,21 @@ public RollOutcome RegisterRoll(int d1, int d2)
         if (rent <= 0)
             rent = space.Rent.FirstOrDefault();
 
-        if (TryPay(player, rent, space.Owner))
+        if (player.DoubledRentPositions.Remove(Array.IndexOf(Board, space)))
         {
-            Log.Add($"{player.Name} pays ₿{rent} rent to {space.Owner.Name} for {space.Name}.");
+            rent *= 2;
+            Log.Add($"  {player.Name}'s rent on {space.Name} is doubled!");
         }
+
+        Player? payee = space.Owner;
+        if (space.CityCollectsNextRent)
+        {
+            space.CityCollectsNextRent = false;
+            payee = null;
+        }
+
+        if (TryPay(player, rent, payee))
+            Log.Add($"{player.Name} pays ₿{rent} rent to {payee?.Name ?? "the City"} for {space.Name}.");
     }
 
     private void HandleRailroadLanding(Player player, BoardSpace space)
@@ -1387,6 +1450,7 @@ public RollOutcome RegisterRoll(int d1, int d2)
 
     private void HandleLotto(Player player)
     {
+        if (!Rules.Jackpot) return;
         player.CollectMoney(Jackpot);
         Jackpot = 500;
     }

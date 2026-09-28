@@ -43,22 +43,26 @@ public bool WantsToBuySpecialPurchase(Player player, BoardSpace space, int price
     int amountOwed = game.CurrentDebt?.Amount ?? 0;
     if (amountOwed <= 0) return;
 
-    // 1. Sell upgrades first — half-value refund is the cheapest way to raise cash,
-    //    sell off the least valuable (lowest-level) upgrades last, highest first,
-    //    since selling one level off five expensive maxed properties raises more
-    //    than gutting one property down to zero.
-    var upgraded = player.Properties
-        .Where(p => p.Type == SpaceType.Property && p.Level > 0)
-        .OrderByDescending(p => p.Level)
-        .ToList();
-
-    foreach (var prop in upgraded)
+    // 1. Sell upgrades, highest level first, until the debt is covered or nothing is sellable.
+    bool sold;
+    do
     {
-        if (player.Money >= amountOwed) return;
-        game.TryDowngradeProperty(player, prop, out _);
-    }
+        sold = false;
+        var upgraded = player.Properties
+            .Where(p => p.Type == SpaceType.Property && p.Level > 0)
+            .OrderByDescending(p => p.Level)
+            .ToList();
 
-    // Re-check: selling upgrades might have been enough.
+        foreach (var prop in upgraded)
+        {
+            if (game.TryDowngradeProperty(player, prop, out _))
+            {
+                sold = true;
+                break;   // re-sort: levels changed
+            }
+        }
+    } while (sold && player.Money < amountOwed);
+
     if (player.Money >= amountOwed) return;
 
     // 2. Mortgage remaining unmortgaged properties, cheapest/least useful first —
