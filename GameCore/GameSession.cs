@@ -13,6 +13,10 @@ public enum TurnPhase
 /// Owns the turn state machine (phase, pending purchase, roll-again, CPU driver) on top of
 /// <see cref="Game"/>. UI hosts render its state and forward button presses to its commands.
 /// Every command returns false (and changes nothing) if it isn't valid in the current phase.
+///
+/// <see cref="Changed"/> fires exactly once per call that actually mutates state, never on a
+/// rejected/no-op call. This is the single signal a network host needs: on Changed, push a
+/// fresh GameSnapshot. See ResolveLanding/EndTurn for where most command paths converge.
 /// </summary>
 public class GameSession
 {
@@ -42,7 +46,7 @@ public class GameSession
     /// <summary>Where dice come from. Defaults to the game's RNG; tests script it.</summary>
     public Func<(int d1, int d2)> DiceSource { get; set; }
 
-    /// <summary>Raised when the CPU driver changes state, so a host can re-render.</summary>
+    /// <summary>Fires once per call that actually changed state. A host re-renders or re-broadcasts on this.</summary>
     public event Action? Changed;
     private void Notify() => Changed?.Invoke();
 
@@ -66,7 +70,7 @@ public class GameSession
             Game.SendToPrison(player, PrisonStatus.GenPop, noPayday: true);
             Game.Log.Add($"{player.Name} rolled doubles three times in a row — busted for reckless speeding and sent straight to Prison!");
             _rollAgainPending = false;
-            EndTurn();
+            EndTurn(); // notifies internally
             return true;
         }
 
@@ -79,27 +83,31 @@ public class GameSession
         if (player.Prison != PrisonStatus.Free)
             _rollAgainPending = false;
 
-        ResolveLanding(player);
+        ResolveLanding(player); // notifies internally
         return true;
     }
 
-    /// <summary>After landing: route to debt / special purchase / purchase offer, else end the turn.</summary>
+    /// <summary>After landing: route to debt / special purchase / purchase offer, else end the turn.
+    /// Every branch notifies exactly once, either here directly or via EndTurn.</summary>
     private void ResolveLanding(Player player)
     {
-        if (Game.PendingDebts.Count > 0) { Phase = TurnPhase.SettlingDebt; return; }
-        if (Game.PendingSpecialPurchase != null) { Phase = TurnPhase.AwaitingSpecialPurchase; return; }
+        if (Game.PendingDebts.Count > 0) { Phase = TurnPhase.SettlingDebt; Notify(); return; }
+        if (Game.PendingSpecialPurchase != null) { Phase = TurnPhase.AwaitingSpecialPurchase; Notify(); return; }
 
         var space = Game.Board[player.Position];
         if (space.IsOwnable && space.Owner == null)
         {
             PendingPurchase = space;
             Phase = TurnPhase.AwaitingPurchase;
+            Notify();
             return;
         }
 
-        EndTurn();
+        EndTurn(); // notifies internally
     }
 
+    /// <summary>Ends the current turn segment (always resets Phase/PendingPurchase; advances to
+    /// the next player unless a roll-again bonus is pending). Always notifies exactly once.</summary>
     private void EndTurn()
     {
         PendingPurchase = null;
@@ -118,6 +126,7 @@ public class GameSession
         }
 
         Start(); // picks up here if the new current player is a CPU
+        Notify();
     }
 
     // ── Purchases ──────────────────────────────────────────────────────────────
@@ -129,14 +138,14 @@ public class GameSession
             return false;
 
         bool bought = Game.TryPurchaseProperty(player, PendingPurchase);
-        EndTurn();
+        EndTurn(); // notifies internally; turn always ends here, bought or not (matches original design)
         return bought;
     }
 
     public bool SkipPurchase()
     {
         if (Phase != TurnPhase.AwaitingPurchase) return false;
-        EndTurn();
+        EndTurn(); // notifies internally
         return true;
     }
 
@@ -149,7 +158,7 @@ public class GameSession
         if (Phase != TurnPhase.AwaitingSpecialPurchase || player == null) return false;
 
         Game.ResolveSpecialPurchase(player, buy);
-        EndTurn();
+        EndTurn(); // notifies internally
         return true;
     }
 
@@ -162,6 +171,7 @@ public class GameSession
 
         bool ok = Game.TryPayBail(player, out var e);
         Error = e;
+        if (ok) Notify();
         return ok;
     }
 
@@ -173,6 +183,7 @@ public class GameSession
 
         bool ok = Game.TryLawyerToken(player, out var e);
         Error = e;
+        if (ok) Notify();
         return ok;
     }
 
@@ -184,10 +195,12 @@ public class GameSession
 
         bool ok = Game.TryGoojfCard(player, out var e);
         Error = e;
+        if (ok) Notify();
         return ok;
     }
 
-    /// <summary>Roll for doubles from prison. Escaping on doubles moves the player and resolves the landing.</summary>
+    /// <summary>Roll for doubles from prison. Escaping on doubles moves the player and resolves the landing.
+    /// Both branches notify internally via ResolveLanding or EndTurn.</summary>
     public bool AttemptAppeal()
     {
         var player = Game.CurrentPlayer;
@@ -219,12 +232,14 @@ public class GameSession
         Error = "";
         ManagingPlayer = Game.CurrentDebt?.Debtor ?? Game.CurrentPlayer;
         Phase = TurnPhase.ManageProperties;
+        Notify();
     }
 
     public void ClosePropertyManager()
     {
         Phase = Game.PendingDebts.Count > 0 ? TurnPhase.SettlingDebt : TurnPhase.AwaitingRoll;
         ManagingPlayer = null;
+        Notify();
     }
 
     public bool UpgradeProperty(BoardSpace space)
@@ -232,6 +247,7 @@ public class GameSession
         if (ManagingPlayer == null) return false;
         bool ok = Game.TryUpgradeProperty(ManagingPlayer, space, out var e);
         Error = e;
+        if (ok) Notify();
         return ok;
     }
 
@@ -240,6 +256,7 @@ public class GameSession
         if (ManagingPlayer == null) return false;
         bool ok = Game.TryDowngradeProperty(ManagingPlayer, space, out var e);
         Error = e;
+        if (ok) Notify();
         return ok;
     }
 
@@ -248,6 +265,7 @@ public class GameSession
         if (ManagingPlayer == null) return false;
         bool ok = Game.TryMortgageProperty(ManagingPlayer, space, out var e);
         Error = e;
+        if (ok) Notify();
         return ok;
     }
 
@@ -256,6 +274,7 @@ public class GameSession
         if (ManagingPlayer == null) return false;
         bool ok = Game.TryUnmortgageProperty(ManagingPlayer, space, out var e);
         Error = e;
+        if (ok) Notify();
         return ok;
     }
 
@@ -267,16 +286,21 @@ public class GameSession
 
         bool ok = Game.TryResolveDebt(out var e);
         Error = e;
+        if (!ok) return false; // nothing changed
 
-        if (ok)
-            Phase = Game.PendingDebts.Count > 0 ? TurnPhase.SettlingDebt : TurnPhase.AwaitingRoll;
+        Phase = Game.PendingDebts.Count > 0 ? TurnPhase.SettlingDebt : TurnPhase.AwaitingRoll;
 
         if (Game.PendingDebts.Count == 0 && Phase == TurnPhase.AwaitingRoll)
-            EndTurn();
+        {
+            EndTurn(); // notifies internally
+        }
         else
-            Start(); // remaining debts might belong to a CPU
+        {
+            Start(); // a remaining debt might belong to a CPU
+            Notify(); // this path doesn't reach EndTurn, so notify explicitly
+        }
 
-        return ok;
+        return true;
     }
 
     public bool DeclareBankruptcy()
@@ -290,9 +314,14 @@ public class GameSession
         Phase = Game.PendingDebts.Count > 0 ? TurnPhase.SettlingDebt : TurnPhase.AwaitingRoll;
 
         if (Game.PendingDebts.Count == 0)
-            EndTurn();
+        {
+            EndTurn(); // notifies internally
+        }
         else
+        {
             Start();
+            Notify();
+        }
 
         return true;
     }
@@ -318,7 +347,10 @@ public class GameSession
         }
     }
 
-    /// <summary>Performs one CPU action. Returns false when the next decision belongs to a human.</summary>
+    /// <summary>Performs one CPU action. Returns false when the next decision belongs to a human.
+    /// Calls into Roll/Buy/SkipPurchase/PayDebt/etc. below already notify on their own; a raw
+    /// IPlayerAI call that mutates Game directly (bypassing those commands) needs its own explicit
+    /// Notify() right after it, since nothing else would raise one for that mutation.</summary>
     private async Task<bool> StepCpuAsync()
     {
         // Debts are settled by the debtor, who isn't necessarily the current player.
@@ -328,16 +360,15 @@ public class GameSession
             if (debtor?.Ai == null) return false;
 
             await _delay(500);
-            debtor.Ai.HandleDebt(debtor, Game);
+            debtor.Ai.HandleDebt(debtor, Game); // raw Game mutation via AI: needs its own Notify
             Notify();
             await _delay(300);
 
             if (Game.CurrentDebt != null && debtor.Money >= Game.CurrentDebt.Amount)
-                PayDebt();
+                PayDebt(); // notifies internally
             else if (Game.CurrentDebt != null)
-                DeclareBankruptcy();
+                DeclareBankruptcy(); // notifies internally
 
-            Notify();
             return true;
         }
 
@@ -347,46 +378,43 @@ public class GameSession
         switch (Phase)
         {
             case TurnPhase.AwaitingRoll:
-                player.Ai.HandleUpgrades(player, Game);
+                player.Ai.HandleUpgrades(player, Game); // raw Game mutation via AI: needs its own Notify
                 Notify();
                 await _delay(300);
 
                 if (player.Prison != PrisonStatus.Free)
                 {
                     await _delay(500);
-                    Game.RunAiJailDecision(player);
+                    Game.RunAiJailDecision(player); // raw Game mutation via AI: needs its own Notify
                     Notify();
                     await _delay(500);
 
                     if (player.Prison == PrisonStatus.Free)
-                        Roll();
+                        Roll(); // notifies internally
                     else
-                        AttemptAppeal(); // still jailed: roll for doubles / serve the turn
+                        AttemptAppeal(); // notifies internally
                 }
                 else
                 {
                     await _delay(600); // TODO: replace with real dice-roll animation later
-                    Roll();
+                    Roll(); // notifies internally
                 }
-                Notify();
                 return true;
 
             case TurnPhase.AwaitingPurchase:
                 if (PendingPurchase == null) return false;
                 await _delay(700); // TODO: "considering..." animation later
                 if (player.Ai.WantsToBuyProperty(player, PendingPurchase, Game))
-                    Buy();
+                    Buy(); // notifies internally
                 else
-                    SkipPurchase();
-                Notify();
+                    SkipPurchase(); // notifies internally
                 return true;
 
             case TurnPhase.AwaitingSpecialPurchase:
                 if (Game.PendingSpecialPurchase == null) return false;
                 await _delay(700);
-                Game.ResolvePendingSpecialPurchaseForAi(player);
-                EndTurn();
-                Notify();
+                Game.ResolvePendingSpecialPurchaseForAi(player); // raw Game mutation; EndTurn below covers the combined notify
+                EndTurn(); // notifies internally
                 return true;
 
             default:

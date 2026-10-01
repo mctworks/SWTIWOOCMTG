@@ -57,3 +57,4 @@
 /home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.UI/obj/Debug/net9.0/refint/SWTIWOOCMTG.UI.dll
 /home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.UI/obj/Debug/net9.0/SWTIWOOCMTG.UI.pdb
 /home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.UI/obj/Debug/net9.0/ref/SWTIWOOCMTG.UI.dll
+/home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.UI/obj/Debug/net9.0/compressed/bx8ykgv6av-{0}-jec476348m-jec476348m.gz

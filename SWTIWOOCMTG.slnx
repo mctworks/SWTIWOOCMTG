@@ -2,5 +2,6 @@
   <Project Path="GameCore.Tests/GameCore.Tests.csproj" />
   <Project Path="GameCore/GameCore.csproj" />
   <Project Path="SWTIWOOCMTG.Desktop/SWTIWOOCMTG.Desktop.csproj" />
+  <Project Path="SWTIWOOCMTG.Server/SWTIWOOCMTG.Server.csproj" />
   <Project Path="SWTIWOOCMTG.UI/SWTIWOOCMTG.UI.csproj" />
 </Solution>

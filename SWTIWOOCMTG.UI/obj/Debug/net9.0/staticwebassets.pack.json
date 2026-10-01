@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets/css/app.css"
     },
     {
+      "Id": "/home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.UI/wwwroot/images/arfenhouse-icon.svg",
+      "PackagePath": "staticwebassets/images/arfenhouse-icon.svg"
+    },
+    {
       "Id": "/home/deck/CsharpProjects/SWTIWOOCMTG/SWTIWOOCMTG.UI/wwwroot/images/board-logo.svg",
       "PackagePath": "staticwebassets/images/board-logo.svg"
     },

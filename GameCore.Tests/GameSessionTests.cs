@@ -233,6 +233,78 @@ public class GameSessionTests
         Assert.True(g.CurrentPlayer == null || g.CurrentPlayer.Ai == null || g.IsGameOver);
     }
 
+    // ── Changed event (the hub's push signal) ───────────────────────────────────
+
+    [Fact]
+    public void Roll_LandingOnUnownedProperty_RaisesChangedExactlyOnce()
+    {
+        var (s, g, a, _) = NewSession();
+        a.Position = 0;
+        s.DiceSource = () => (1, 0);
+        int count = 0;
+        s.Changed += () => count++;
+
+        s.Roll();
+
+        Assert.Equal(1, count);
+    }
+
+    [Fact]
+    public void RejectedCommand_DoesNotRaiseChanged()
+    {
+        var (s, _, a, _) = NewSession();
+        int count = 0;
+        s.Changed += () => count++;
+
+        // a isn't in prison, so PayBail is rejected by Game.TryPayBail: nothing changed.
+        Assert.False(s.PayBail());
+
+        Assert.Equal(0, count);
+    }
+
+    [Fact]
+    public void PropertyManagement_Upgrade_RaisesChangedOnSuccessOnly()
+    {
+        var (s, g, a, _) = NewSession();
+        var owned = g.Board[1];
+        owned.Owner = a;
+        a.Properties.Add(owned);
+        s.OpenPropertyManager();
+
+        int count = 0;
+        s.Changed += () => count++;
+
+        Assert.True(s.UpgradeProperty(owned));
+        Assert.Equal(1, count);
+
+        var notOwned = g.Board[3];
+        Assert.False(s.UpgradeProperty(notOwned)); // rejected: doesn't own it
+        Assert.Equal(1, count); // no extra Notify from the rejected call
+    }
+
+    [Fact]
+    public void DebtFlow_PayDebt_WithAnotherDebtStillQueued_StillRaisesChanged()
+    {
+        var (s, g, a, b) = NewSession();
+        g.TryAddPlayer("C", out _);
+        a.Money = 0;
+        g.PayAllPlayers(a, 10); // queues a debt to b, then to c
+        Assert.Equal(2, g.PendingDebts.Count);
+
+        a.Position = 0;
+        s.DiceSource = () => (1, 0);
+        s.Roll(); // routes into SettlingDebt
+
+        int count = 0;
+        s.Changed += () => count++;
+        a.Money = 10; // enough to cover only the first (b's) debt
+
+        Assert.True(s.PayDebt());
+
+        Assert.Equal(TurnPhase.SettlingDebt, s.Phase); // c's debt is still pending
+        Assert.Equal(1, count); // this branch doesn't reach EndTurn, but still notifies
+    }
+
     [Fact]
     public async Task CpuFirstPlayer_StartCalledAtGameStart_TakesItsTurnWithoutManualPrompt()
     {

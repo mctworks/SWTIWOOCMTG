@@ -423,4 +423,28 @@ public class GameEngineTests
         var o2 = Enumerable.Range(0, 10).Select(_ => g2.RiskDeck.Draw().Text).ToList();
         Assert.NotEqual(o1, o2);
     }
+
+    // ── Winner ──────
+    [Fact]
+    public void Winner_IsNullUntilTheGameIsActuallyOver()
+    {
+        var (g, a, b) = NewGame();
+        Assert.False(g.IsGameOver);
+        Assert.Null(g.Winner); // two active players: nobody's won yet
+
+        g.Eliminate(b);
+
+        Assert.True(g.IsGameOver);
+        Assert.Same(a, g.Winner);
+    }
+
+    [Fact]
+    public void Winner_IsNullWithFewerThanTwoPlayers()
+    {
+        var g = new Game();
+        g.TryAddPlayer("Solo", out _);
+
+        Assert.False(g.IsGameOver);
+        Assert.Null(g.Winner); // a single player in a fresh room is not "the winner" of anything
+    }
 }

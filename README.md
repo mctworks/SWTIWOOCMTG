@@ -43,10 +43,10 @@ Attribution required: do whatever you want with this (use it, modify it, build o
 
 1. Debug game logic, plus tweak and finalize rules/settings: Ongoing, but at a good place! Now backed by an xUnit test suite and a seeded RNG for reproducible runs. :yellow_circle:
 2. Split UI into a shared Razor Class Library: Complete :white_check_mark:
-3. Add an ASP.NET Core (Kestrel) host project referencing `GameCore` directly, to become the server. No managed cloud service, runs anywhere Kestrel runs. Turn logic is now fully extracted into a UI-independent `GameSession`, which is the main prep work this depended on. Host project itself not yet started. :red_circle:
+3. Add an ASP.NET Core (Kestrel) host project referencing `GameCore` directly, to become the server. No managed cloud service, runs anywhere Kestrel runs. Turn logic is now fully extracted into a UI-independent `GameSession`, which is the main prep work this depended on. Host project in progress. :yellow_circle:
 4. Self-hosted SignalR Hub on that host for real-time push actions (rolls, moves, rent, cards, debt/bankruptcy, turn changes) :red_circle:
 5. Web API on the same host for session lobby, save/load, and analytics ingestion. :red_circle:
 6. Blazor web client served from the same host, reusing the existing UI library and talking to the SignalR hub; this is how the game reaches other devices, no native mobile app :yellow_circle:
 7. RabbitMQ analytics pipeline, decoupled from live gameplay :red_circle:
 8. CPU AI: Hand-coded heuristics behind `IPlayerAI` (buy/upgrade/debt/jail decision hooks). Currently functional at a placeholder level; ongoing refinement of the heuristics themselves (property valuation, monopoly pursuit, debt triage) as testing surfaces gaps :yellow_circle:
-9. UI overhaul / non-placeholder art: Ongoing :yellow_circle:
+9. UI overhaul / non-placeholder art: Ongoing, not even all placeholders are completely in place yet :yellow_circle:
